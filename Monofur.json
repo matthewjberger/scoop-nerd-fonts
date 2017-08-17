@@ -1,0 +1,27 @@
+﻿{
+    "version":  "v1.1.0",
+    "license":  "MIT",
+    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
+    "url":  [
+        "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Monofur.zip",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/install-nerd-fonts.ps1",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/uninstall-nerd-fonts.ps1"
+    ],
+    "hash":  "0c9944fc8dd35b868350a668440929aee8f2cea35e295986d172c3b9f7fecadc",
+    "checkver": "github",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/Monofur.zip",
+    "installer": {
+        "_comment": "install-nerd-fonts.ps1 installs all windows compatible nerd fonts in a given directory",
+        "file": "install-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    },
+    "uninstaller": {
+        "_comment": "uninstall-nerd-fonts.ps1 uninstalls all windows compatible nerd fonts in a given directory",
+        "file": "uninstall-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    }
+}

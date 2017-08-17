@@ -1,9 +1,9 @@
-param($dir)
+param([String]$dir)
 
 $Shell = New-Object -ComObject Shell.Application
 $SystemFontsFolder = $Shell.Namespace(0x14)
 $SystemFontsPath = $Shell.Namespace(0x14)
-$Fonts = gci $dir -Filter "*Windows Compatible*"
+$Fonts = Get-ChildItem $dir -Filter "*Windows Compatible*"
 
 foreach($Font in $Fonts)
 {

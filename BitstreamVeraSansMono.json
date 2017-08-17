@@ -1,0 +1,27 @@
+﻿{
+    "version":  "v1.1.0",
+    "license":  "MIT",
+    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
+    "url":  [
+        "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/BitstreamVeraSansMono.zip",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/install-nerd-fonts.ps1",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/uninstall-nerd-fonts.ps1"
+    ],
+    "hash":  "e984c2c1e9971555c061b95c8c247c391cb3c0795346d8a56e2f36790e62ac44",
+    "checkver": "github",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/BitstreamVeraSansMono.zip",
+    "installer": {
+        "_comment": "install-nerd-fonts.ps1 installs all windows compatible nerd fonts in a given directory",
+        "file": "install-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    },
+    "uninstaller": {
+        "_comment": "uninstall-nerd-fonts.ps1 uninstalls all windows compatible nerd fonts in a given directory",
+        "file": "uninstall-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+﻿{
+    "version":  "v1.1.0",
+    "license":  "MIT",
+    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
+    "url":  [
+        "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/SourceCodePro.zip",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/install-nerd-fonts.ps1",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/uninstall-nerd-fonts.ps1"
+    ],
+    "hash":  "281a86c503bf6dd5664169aeeb18ec1165f163a79e18909dbea319b8b9667173",
+    "checkver": "github",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/SourceCodePro.zip",
+    "installer": {
+        "_comment": "install-nerd-fonts.ps1 installs all windows compatible nerd fonts in a given directory",
+        "file": "install-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    },
+    "uninstaller": {
+        "_comment": "uninstall-nerd-fonts.ps1 uninstalls all windows compatible nerd fonts in a given directory",
+        "file": "uninstall-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    }
+}

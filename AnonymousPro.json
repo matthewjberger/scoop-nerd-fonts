@@ -1,0 +1,27 @@
+﻿{
+    "version":  "v1.1.0",
+    "license":  "MIT",
+    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
+    "url":  [
+        "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/AnonymousPro.zip",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/install-nerd-fonts.ps1",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/uninstall-nerd-fonts.ps1"
+    ],
+    "hash":  "b0ae604f8841c7bf8ab3adb9eba10e702108964240fc817010a2e7c2e9ab2d7a",
+    "checkver": "github",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/AnonymousPro.zip",
+    "installer": {
+        "_comment": "install-nerd-fonts.ps1 installs all windows compatible nerd fonts in a given directory",
+        "file": "install-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    },
+    "uninstaller": {
+        "_comment": "uninstall-nerd-fonts.ps1 uninstalls all windows compatible nerd fonts in a given directory",
+        "file": "uninstall-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    }
+}
