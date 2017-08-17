@@ -7,7 +7,11 @@
         "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/install-nerd-fonts.ps1",
         "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/uninstall-nerd-fonts.ps1"
     ],
-    "hash":  "0c9944fc8dd35b868350a668440929aee8f2cea35e295986d172c3b9f7fecadc",
+    "hash":  [
+        "0c9944fc8dd35b868350a668440929aee8f2cea35e295986d172c3b9f7fecadc",
+        "beb3a09d66f6e86623291002a042a18ecba89054cd3aa5628435a6a77401c0e1",
+        "19cf006d976fb8506d16d8ab896559de60c6a551c67ab7b5eb7c10d9eb43da51"
+    ],
     "checkver": "github",
     "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/Monofur.zip",
     "installer": {

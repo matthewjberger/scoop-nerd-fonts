@@ -7,7 +7,11 @@
         "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/install-nerd-fonts.ps1",
         "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/scripts/uninstall-nerd-fonts.ps1"
     ],
-    "hash":  "80994efb499e2813c6a4e8eea57c65964d574686302e8d30e84ba2e61cc8693a",
+    "hash":  [
+        "80994efb499e2813c6a4e8eea57c65964d574686302e8d30e84ba2e61cc8693a",
+        "beb3a09d66f6e86623291002a042a18ecba89054cd3aa5628435a6a77401c0e1",
+        "19cf006d976fb8506d16d8ab896559de60c6a551c67ab7b5eb7c10d9eb43da51"
+    ],
     "checkver": "github",
     "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/Ubuntu.zip",
     "installer": {

@@ -1,1 +1,0 @@
-Replace `$name` with the name of the nerd-font, and replace `$hash` with the hash of the nerd font's zip folder. Generation of manifests for nerd fonts could be automated with a script using this template.
