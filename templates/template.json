@@ -1,0 +1,23 @@
+{
+    "version":  "v1.1.0",
+    "license":  "MIT",
+    "url":  "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/$name.zip",
+    "checkver": "github",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/$name.zip",
+    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
+    "hash":  "$hash",
+    "installer": {
+        "_comment": "install-nerd-fonts.ps1 installs all windows compatible nerd fonts in a given directory",
+        "file": "install-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    },
+    "uninstaller": {
+        "_comment": "uninstall-nerd-fonts.ps1 uninstalls all windows compatible nerd fonts in a given directory",
+        "file": "uninstall-nerd-font.ps1",
+        "args": [
+            "$dir"
+        ]
+    }
+}

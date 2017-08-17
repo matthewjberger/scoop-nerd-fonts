@@ -1,0 +1,23 @@
+﻿{
+    "version":  "v1.1.0",
+    "license":  "MIT",
+    "url":  "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Hack.zip",
+    "checkver": "github",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/Hack.zip",
+    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
+    "hash":  "ceebc8767d79b774b631c56fec1082b008310b0c6e5bb4b8e8826027ec6db882",
+    "installer": {
+        "_comment": "install-nerd-fonts.ps1 installs all windows compatible nerd fonts in a given directory",
+        "file": "install-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    },
+    "uninstaller": {
+        "_comment": "uninstall-nerd-fonts.ps1 uninstalls all windows compatible nerd fonts in a given directory",
+        "file": "uninstall-nerd-font.ps1",
+        "args": [
+            "$dir"
+        ]
+    }
+}
