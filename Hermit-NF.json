@@ -1,0 +1,29 @@
+﻿{
+    "version":  "v1.1.0",
+    "license":  "MIT",
+    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
+    "url":  [
+        "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Hermit.zip",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/install-nerd-fonts.ps1",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/uninstall-nerd-fonts.ps1"
+    ],
+    "hash":  [
+        "aef8e5496298b986b5a6be8ef0408652f6ed2fa0868a8c44f4be79f6d0c16e36",
+        "10424e95260ce714fd0c913efad04be6a343c1341dbd5018e4762dfce4d14ff4",
+        "1966229ad32dc573809ae4531a05f3b973bf806e5b8a8cf14ab335437ff3f20f"
+    ],
+    "checkver": "github",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/Hermit.zip",
+    "installer": {
+        "file": "install-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    },
+    "uninstaller": {
+        "file": "uninstall-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    }
+}

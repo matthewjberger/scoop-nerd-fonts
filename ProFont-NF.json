@@ -1,0 +1,29 @@
+﻿{
+    "version":  "v1.1.0",
+    "license":  "MIT",
+    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
+    "url":  [
+        "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/ProFont.zip",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/install-nerd-fonts.ps1",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/uninstall-nerd-fonts.ps1"
+    ],
+    "hash":  [
+        "4463c9f5a4dd1dbd27d198c893819e7552d77e607f33e806e0b916fc506f7694",
+        "10424e95260ce714fd0c913efad04be6a343c1341dbd5018e4762dfce4d14ff4",
+        "1966229ad32dc573809ae4531a05f3b973bf806e5b8a8cf14ab335437ff3f20f"
+    ],
+    "checkver": "github",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/ProFont.zip",
+    "installer": {
+        "file": "install-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    },
+    "uninstaller": {
+        "file": "uninstall-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    }
+}

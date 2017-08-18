@@ -1,0 +1,29 @@
+﻿{
+    "version":  "v1.1.0",
+    "license":  "MIT",
+    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
+    "url":  [
+        "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Hasklig.zip",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/install-nerd-fonts.ps1",
+        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/uninstall-nerd-fonts.ps1"
+    ],
+    "hash":  [
+        "6b07b8b61791fbfe88735a44e119ad54a2535d816d1054895b04ca03e5dd9bc5",
+        "10424e95260ce714fd0c913efad04be6a343c1341dbd5018e4762dfce4d14ff4",
+        "1966229ad32dc573809ae4531a05f3b973bf806e5b8a8cf14ab335437ff3f20f"
+    ],
+    "checkver": "github",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/Hasklig.zip",
+    "installer": {
+        "file": "install-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    },
+    "uninstaller": {
+        "file": "uninstall-nerd-fonts.ps1",
+        "args": [
+            "$dir"
+        ]
+    }
+}
