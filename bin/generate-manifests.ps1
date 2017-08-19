@@ -2,7 +2,7 @@
 
 $templateString = @"
 {
-    "version":  "v1.1.0",
+    "version":  "1.1.0",
     "license":  "MIT",
     "homepage":  "https://github.com/ryanoasis/nerd-fonts",
     "url":  [
@@ -16,7 +16,7 @@ $templateString = @"
         "%uninstallationScriptHash"
     ],
     "checkver": "github",
-    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/`$version/%name.zip",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/%name.zip",
     "installer": {
         "file": "install-nerd-fonts.ps1",
         "args": [

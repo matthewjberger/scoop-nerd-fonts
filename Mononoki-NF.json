@@ -1,5 +1,5 @@
 ﻿{
-    "version":  "v1.1.0",
+    "version":  "1.1.0",
     "license":  "MIT",
     "homepage":  "https://github.com/ryanoasis/nerd-fonts",
     "url":  [
@@ -9,11 +9,11 @@
     ],
     "hash":  [
         "721ca12da8869216670b77bc106e35095c5fe2ab9422a9e1151626584c52b9c7",
-        "0a3fa00371990e81633032f1cf71ac1137c24eadd56e140ace3c7fe15f01cea2",
+        "c8a4605c10a807a137256debd0b2415507492117bf8638a2a6ebd0a851505222",
         "bbdfb958275f63cd015eae4efed58a3c65afa1057061f7de4c4882529be1bcdc"
     ],
     "checkver": "github",
-    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/Mononoki.zip",
+    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Mononoki.zip",
     "installer": {
         "file": "install-nerd-fonts.ps1",
         "args": [
