@@ -9,8 +9,8 @@
     ],
     "hash":  [
         "b0ae604f8841c7bf8ab3adb9eba10e702108964240fc817010a2e7c2e9ab2d7a",
-        "10424e95260ce714fd0c913efad04be6a343c1341dbd5018e4762dfce4d14ff4",
-        "1966229ad32dc573809ae4531a05f3b973bf806e5b8a8cf14ab335437ff3f20f"
+        "0a3fa00371990e81633032f1cf71ac1137c24eadd56e140ace3c7fe15f01cea2",
+        "bbdfb958275f63cd015eae4efed58a3c65afa1057061f7de4c4882529be1bcdc"
     ],
     "checkver": "github",
     "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/AnonymousPro.zip",
