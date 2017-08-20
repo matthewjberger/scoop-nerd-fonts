@@ -1,6 +1,6 @@
 # scoop-nerd-fonts bucket
 
-## Note: This does not completely work as is. Installing fonts manually on Windows has issues.
+#### Note: This does not completely work as is. Installing fonts manually on Windows has issues that will need to be addressed in the installation and uninstallation scripts.
 
 This repo is an attempt at creating an installer/uninstaller for nerd-fonts in the form of a [scoop package manager](https://github.com/lukesampson/scoop) bucket.
 
