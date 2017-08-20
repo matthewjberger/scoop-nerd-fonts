@@ -1,19 +1,21 @@
-﻿{
-    "version":  "1.1.0",
-    "license":  "MIT",
-    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
-    "url":  [
+{
+    "version": "1.1.0",
+    "license": "MIT",
+    "homepage": "https://github.com/ryanoasis/nerd-fonts",
+    "url": [
         "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/MPlus.zip",
         "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/install-nerd-fonts.ps1",
         "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/uninstall-nerd-fonts.ps1"
     ],
-    "hash":  [
+    "hash": [
         "3d5f7cb08eaeb22c256d5c62af807e4ddc66f5d9834590b9abdb0728e08f0125",
         "c8a4605c10a807a137256debd0b2415507492117bf8638a2a6ebd0a851505222",
         "bbdfb958275f63cd015eae4efed58a3c65afa1057061f7de4c4882529be1bcdc"
     ],
     "checkver": "github",
-    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/MPlus.zip",
+    "autoupdate": {
+        "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/MPlus.zip"
+    },
     "installer": {
         "file": "install-nerd-fonts.ps1",
         "args": [

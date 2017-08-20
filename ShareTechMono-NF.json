@@ -1,19 +1,21 @@
-﻿{
-    "version":  "1.1.0",
-    "license":  "MIT",
-    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
-    "url":  [
+{
+    "version": "1.1.0",
+    "license": "MIT",
+    "homepage": "https://github.com/ryanoasis/nerd-fonts",
+    "url": [
         "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/ShareTechMono.zip",
         "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/install-nerd-fonts.ps1",
         "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/uninstall-nerd-fonts.ps1"
     ],
-    "hash":  [
+    "hash": [
         "47e6b2a728457e47f449bc114c663c67273e2bba323d0163c38e53fb815835d6",
         "c8a4605c10a807a137256debd0b2415507492117bf8638a2a6ebd0a851505222",
         "bbdfb958275f63cd015eae4efed58a3c65afa1057061f7de4c4882529be1bcdc"
     ],
     "checkver": "github",
-    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/ShareTechMono.zip",
+    "autoupdate": {
+        "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/ShareTechMono.zip"
+    },
     "installer": {
         "file": "install-nerd-fonts.ps1",
         "args": [

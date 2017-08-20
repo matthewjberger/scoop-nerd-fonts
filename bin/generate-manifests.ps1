@@ -1,8 +1,6 @@
-﻿#TODO: Make file downloads asynchronous
-
-$templateString = @"
+﻿$templateString = @"
 {
-    "version":  "1.1.0",
+    "version":  "",
     "license":  "MIT",
     "homepage":  "https://github.com/ryanoasis/nerd-fonts",
     "url":  [
@@ -11,12 +9,14 @@ $templateString = @"
         "%uninstallationScriptUrl"
     ],
     "hash":  [
-        "%hash",
+        "",
         "%installationScriptHash",
         "%uninstallationScriptHash"
     ],
     "checkver": "github",
-    "autoupdate": "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/%name.zip",
+    "autoupdate": {
+        "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/%name.zip"
+    },
     "installer": {
         "file": "install-nerd-fonts.ps1",
         "args": [
@@ -83,39 +83,31 @@ New-Item $filesDir -type directory -Force | Out-Null
 
 $client = New-Object System.Net.WebClient
 
+# Generate file hash for installation script
 Write-Host "Downloading $installationScriptUrl to $installationScriptFilePath" -ForegroundColor Blue
 $client.DownloadFile($installationScriptUrl, $installationScriptFilePath)
 $installationScriptHash = (Get-FileHash $installationScriptFilePath).Hash.ToLower()
 Write-Host "Generated installation script hash" -ForegroundColor Green
 
+# Generate file hash for uninstallation script
 Write-Host "Downloading $uninstallationScriptUrl to $uninstallationScriptFilePath" -ForegroundColor Blue
 $client.DownloadFile($uninstallationScriptUrl, $uninstallationScriptFilePath)
 $uninstallationScriptHash = (Get-FileHash $uninstallationScriptFilePath).Hash.ToLower()
-Write-Host "Generated uninstallation script hash`n" -ForegroundColor Green
+Write-Host "Generated uninstallation script hash" -ForegroundColor Green
 
+Remove-Item $filesDir -Force -Recurse
+
+# Generate manifests
 $fontNames | ForEach-Object {
-    $font = $_
-    $url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/$font.zip"
-
-    $outputFilePath = "$filesDir\$font.zip"
-
-    Write-Host "Downloading $url to `n$outputFilePath" -ForegroundColor Blue
-    $client.DownloadFile($url, $outputFilePath)
-
-    $fontZipFileHash = (Get-FileHash $outputFilePath).Hash.ToLower()
-
-    $output = $templateString -replace "%name", $font
+    $url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/$_.zip"
+    $output = $templateString -replace "%name", $_
     $output = $output -replace "%url", $url
     $output = $output -replace "%installationScriptUrl", $installationScriptUrl
     $output = $output -replace "%uninstallationScriptUrl", $uninstallationScriptUrl
-    $output = $output -replace "%hash", $fontZipFileHash
     $output = $output -replace "%installationScriptHash", $installationScriptHash
     $output = $output -replace "%uninstallationScriptHash", $uninstallationScriptHash
-    $output | Out-File -FilePath "$manifestDir\$font-NF.json" -Encoding utf8
-
-    Remove-Item $outputFilePath
-
-    Write-Host "Generated manifest for font: $font`n" -ForegroundColor Green
+    $output | Out-File -FilePath "$manifestDir\$_-NF.json" -Encoding utf8
 }
 
-Remove-Item $filesDir -Force -Recurse
+# Autoupdate the manifests
+& ./checkver.ps1 * -u
