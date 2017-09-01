@@ -23,7 +23,7 @@
                 Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue
             }
 
-            Write-Host 'The font 'AnonymousPro' has been uninstalled and will not be present after restarting your computer.' -Foreground Magenta
+            Write-Host 'The 'AnonymousPro' Nerd Font family has been uninstalled and will not be present after restarting your computer.' -Foreground Magenta
         "
     }
 }
