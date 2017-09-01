@@ -23,7 +23,6 @@
                 Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name `$_.Name.Replace(`$_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue
                 Remove-Item \"`$env:windir\\Fonts\\`$(`$_.Name)\" -Force -ErrorAction SilentlyContinue
             }
-
             Write-Host \"The '%name' Nerd Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta
         "
     }
