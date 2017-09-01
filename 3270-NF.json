@@ -2,30 +2,26 @@
     "version": "1.1.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": [
-        "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/3270.zip",
-        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/install-nerd-fonts.ps1",
-        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/uninstall-nerd-fonts.ps1"
-    ],
-    "hash": [
-        "a462873fb52827b99da63d5d8ea0ceb46276d3204782fd2417d8c469746da153",
-        "c8a4605c10a807a137256debd0b2415507492117bf8638a2a6ebd0a851505222",
-        "bbdfb958275f63cd015eae4efed58a3c65afa1057061f7de4c4882529be1bcdc"
-    ],
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/3270.zip",
+    "hash": "a462873fb52827b99da63d5d8ea0ceb46276d3204782fd2417d8c469746da153",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/3270.zip"
     },
     "installer": {
-        "file": "install-nerd-fonts.ps1",
-        "args": [
-            "$dir"
-        ]
+        "script": "
+            Get-ChildItem $dir -filter '*Windows Compatible.*' | ForEach-Object {
+                New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null
+                Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"
+            }
+        "
     },
     "uninstaller": {
-        "file": "uninstall-nerd-fonts.ps1",
-        "args": [
-            "$dir"
-        ]
+        "script": "
+            Get-ChildItem $dir -filter '*Windows Compatible.*' | ForEach-Object {
+                Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue
+                Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue
+            }
+        "
     }
 }

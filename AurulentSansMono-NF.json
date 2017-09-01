@@ -2,30 +2,26 @@
     "version": "1.1.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": [
-        "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/AurulentSansMono.zip",
-        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/install-nerd-fonts.ps1",
-        "https://raw.githubusercontent.com/matthewjberger/scoop-nerd-fonts/master/bin/uninstall-nerd-fonts.ps1"
-    ],
-    "hash": [
-        "302c417aa3caaae553ddcd7f4482ea568a4996189623f740a6a87883bd5c5457",
-        "c8a4605c10a807a137256debd0b2415507492117bf8638a2a6ebd0a851505222",
-        "bbdfb958275f63cd015eae4efed58a3c65afa1057061f7de4c4882529be1bcdc"
-    ],
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/AurulentSansMono.zip",
+    "hash": "302c417aa3caaae553ddcd7f4482ea568a4996189623f740a6a87883bd5c5457",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/AurulentSansMono.zip"
     },
     "installer": {
-        "file": "install-nerd-fonts.ps1",
-        "args": [
-            "$dir"
-        ]
+        "script": "
+            Get-ChildItem $dir -filter '*Windows Compatible.*' | ForEach-Object {
+                New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null
+                Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"
+            }
+        "
     },
     "uninstaller": {
-        "file": "uninstall-nerd-fonts.ps1",
-        "args": [
-            "$dir"
-        ]
+        "script": "
+            Get-ChildItem $dir -filter '*Windows Compatible.*' | ForEach-Object {
+                Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue
+                Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue
+            }
+        "
     }
 }
