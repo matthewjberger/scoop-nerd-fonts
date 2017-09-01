@@ -3,7 +3,7 @@
     "version":  "",
     "license":  "MIT",
     "homepage":  "https://github.com/ryanoasis/nerd-fonts",
-    "url": "%url",
+    "url": " ",
     "hash":  "",
     "checkver": "github",
     "autoupdate": {
@@ -67,10 +67,7 @@ $fontNames = @(
 
 # Generate manifests
 $fontNames | ForEach-Object {
-    $url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/$_.zip"
-    $output = $templateString -replace "%name", $_
-    $output = $output -replace "%url", $url
-    $output | Out-File -FilePath "$PSScriptRoot\..\$_-NF.json" -Encoding utf8
+    $templateString -replace "%name", $_ | Out-File -FilePath "$PSScriptRoot\..\$_-NF.json" -Encoding utf8
 }
 
 # Use scoop's checkver script to autoupdate the manifests
