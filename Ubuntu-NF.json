@@ -1,9 +1,9 @@
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Ubuntu.zip",
-    "hash": "80994efb499e2813c6a4e8eea57c65964d574686302e8d30e84ba2e61cc8693a",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Ubuntu.zip",
+    "hash": "7d386304371ef6b3f265a317307d5562cf4c536b45d8bfbf795b64678a2b00bf",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Ubuntu.zip"

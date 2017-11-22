@@ -1,9 +1,9 @@
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/DroidSansMono.zip",
-    "hash": "5db5ffcfd6b31f3bab4a183444a8bb622cf50ab7dc147a64de3080ed9e2ec68d",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/DroidSansMono.zip",
+    "hash": "c01bd116d1d828d6e55fdc2cfd55e3e0874f53c8a3ca1c1e4d359acd0dd9171b",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/DroidSansMono.zip"

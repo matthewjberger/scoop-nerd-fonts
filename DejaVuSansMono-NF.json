@@ -1,9 +1,9 @@
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/DejaVuSansMono.zip",
-    "hash": "72c9f1acf4a92812965dbdfa80d236d8f251329bd6aa4cbb3277c67756a20a4b",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/DejaVuSansMono.zip",
+    "hash": "e0e8becdf376561063a804bc82ae3234595cc1a7c7ca035c3555cb04b619b03f",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/DejaVuSansMono.zip"

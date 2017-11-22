@@ -1,9 +1,9 @@
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Lekton.zip",
-    "hash": "06fdd68a3f68f34004b56291f947480b1da1e0640651d02c40cb65d95497398e",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Lekton.zip",
+    "hash": "7a31875cdb2bbbe9f5ad1da342adec745cbaed22a677510e313d9a6bbab4c46d",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Lekton.zip"

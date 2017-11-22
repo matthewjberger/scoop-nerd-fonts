@@ -1,9 +1,9 @@
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/AurulentSansMono.zip",
-    "hash": "302c417aa3caaae553ddcd7f4482ea568a4996189623f740a6a87883bd5c5457",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/AurulentSansMono.zip",
+    "hash": "e72de2e8a8d22afa7ce3aafb819a9a11487c4fc2165e317a1a54b39f471cf5f4",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/AurulentSansMono.zip"
