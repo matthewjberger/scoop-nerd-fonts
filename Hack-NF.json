@@ -1,9 +1,9 @@
 {
-    "version": "1.2.0",
+    "version": "2.0.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip",
-    "hash": "f1c2b5864903a2f2803da73be13541dd4e48d0fcf4cac5631112bfdf7577ee43",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Hack.zip",
+    "hash": "d1147483fd0310fa6bfce6799f47654e3f435010fdc709877b15a23f090ed41c",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Hack.zip"

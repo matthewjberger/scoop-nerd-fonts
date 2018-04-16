@@ -1,9 +1,9 @@
 {
-    "version": "1.2.0",
+    "version": "2.0.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Mononoki.zip",
-    "hash": "c06fd6193ab463cb76ec1712a2a7d1b505bebac7918db22f3c111435c19525b5",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Mononoki.zip",
+    "hash": "715813f9bdeddfa35a39681dedf4a61cf1b6cfe8e06b9b3ca19c391cb308a589",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Mononoki.zip"

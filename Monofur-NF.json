@@ -1,9 +1,9 @@
 {
-    "version": "1.2.0",
+    "version": "2.0.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Monofur.zip",
-    "hash": "002ae1e8f7a1f6027202f0dd71e72674c9afdee157442ca8207313f363499d4c",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Monofur.zip",
+    "hash": "16b5cc275bd5689d3f3b348119c7356d9c1de67c46dd2d24f752972ad086b765",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Monofur.zip"
