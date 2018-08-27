@@ -1,30 +1,33 @@
 ﻿$templateString = @"
 {
-    "version":  "",
-    "license":  "MIT",
-    "homepage":  "https://github.com/ryanoasis/nerd-fonts",
+    "version": "0.0",
+    "license": "MIT",
+    "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "url": " ",
-    "hash":  "",
+    "hash": " ",
     "checkver": "github",
+    "depends": "sudo",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/%name.zip"
     },
     "installer": {
-        "script": "
-            Get-ChildItem `$dir -filter '*Windows Compatible.*' | ForEach-Object {
-                New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name `$_.Name.Replace(`$_.Extension, ' (TrueType)') -Value `$_.Name -Force | Out-Null
-                Copy-Item \"`$dir\\`$_\" -destination \"`$env:windir\\Fonts\"
-            }
-        "
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install `$app'\"; exit 1 }",
+            "Get-ChildItem `$dir -filter '*Windows Compatible.*' | ForEach-Object {",
+            "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name `$_.Name.Replace(`$_.Extension, ' (TrueType)') -Value `$_.Name -Force | Out-Null",
+            "    Copy-Item \"`$dir\\`$_\" -destination \"`$env:windir\\Fonts\"",
+            "}"
+        ]
     },
     "uninstaller": {
-        "script": "
-            Get-ChildItem `$dir -filter '*Windows Compatible.*' | ForEach-Object {
-                Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name `$_.Name.Replace(`$_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue
-                Remove-Item \"`$env:windir\\Fonts\\`$(`$_.Name)\" -Force -ErrorAction SilentlyContinue
-            }
-            Write-Host \"The '%name' Nerd Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta
-        "
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall `$app'\"; exit 1 }",
+            "Get-ChildItem `$dir -filter '*Windows Compatible.*' | ForEach-Object {",
+            "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name `$_.Name.Replace(`$_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "    Remove-Item \"`$env:windir\\Fonts\\`$(`$_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The '`$(`$app.Replace('-NF', ''))' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
     }
 }
 "@
@@ -72,4 +75,4 @@ $fontNames | ForEach-Object {
 }
 
 # Use scoop's checkver script to autoupdate the manifests
-& ./checkver.ps1 * -u
+& $psscriptroot\checkver.ps1 * -u
