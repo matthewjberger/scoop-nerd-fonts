@@ -1,4 +1,4 @@
-﻿$templateString = @"
+$templateString = @"
 {
     "version": "0.0",
     "license": "MIT",
@@ -71,7 +71,7 @@ $fontNames = @(
 
 # Generate manifests
 $fontNames | ForEach-Object {
-    $templateString -replace "%name", $_ | Out-File -FilePath "$PSScriptRoot\..\$_-NF.json" -Encoding utf8
+    $templateString -replace "%name", $_ | Out-File -FilePath "$PSScriptRoot\..\bucket\$_-NF.json" -Encoding utf8
 }
 
 # Use scoop's checkver script to autoupdate the manifests
