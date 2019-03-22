@@ -71,8 +71,18 @@ $fontNames = @(
 
 # Generate manifests
 $fontNames | ForEach-Object {
-    $templateString -replace "%name", $_ | Out-File -FilePath "$PSScriptRoot\..\$_-NF.json" -Encoding utf8
+    $templateString -replace "%name", $_ | Out-File -FilePath "$PSScriptRoot\..\bucket\$_-NF.json" -Encoding utf8
 }
 
 # Use scoop's checkver script to autoupdate the manifests
 & $psscriptroot\checkver.ps1 * -u
+
+# Keep frozen files from updating
+$frozenFiles = @(
+    "CodeNewRoman-NF",
+    "Gohu-NF"
+)
+
+$frozenFiles | ForEach-Object {
+    git checkout "../bucket/$_.json"
+}
