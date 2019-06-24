@@ -3,7 +3,7 @@
     "license": "OFL-1.1",
     "homepage": "https://github.com/tonsky/FiraCode",
     "url": "https://github.com/tonsky/FiraCode/releases/download/1.206/FiraCode_1.206.zip",
-    "hash": "00f8bceecd76befd929f89a2b4cc7e870e3a90f78a568acc96a9b2616a6fc6cb",
+    "hash": "433e9e059e53ae1e94c674819b73e49d65bd76e3c6ec70f42d2324062ea3210b",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/tonsky/FiraCode/releases/download/$version/FiraCode_$version.zip"
@@ -12,7 +12,7 @@
         "script": [
             "Get-ChildItem $dir -Filter '*.ttf' -Recurse | ForEach-Object {",
             "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
-            "  Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"",
+            "  Copy-Item \"$dir\\ttf\\$_\" -destination \"$env:windir\\Fonts\"",
             "}"
         ]
     },
