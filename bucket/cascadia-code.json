@@ -3,6 +3,7 @@
     "license": "OFL-1.1",
     "homepage": "https://github.com/microsoft/cascadia-code",
     "url": "https://github.com/microsoft/cascadia-code/releases/download/v1909.16/Cascadia.ttf",
+    "hash": "c0485d313fbc40f9076e707ed0aa98c9e3f2649d8b30adff705cebf0a0dc1d93",
     "checkver": "github",
     "depends": "sudo",
     "autoupdate": {
