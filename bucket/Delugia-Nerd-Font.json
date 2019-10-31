@@ -1,9 +1,9 @@
 {
-    "version": "1910.04",
+    "version": "1910.04.1",
     "license": "OFL-1.1",
     "homepage": "https://github.com/adam7/delugia-code",
-    "url": "https://github.com/adam7/delugia-code/releases/download/v1910.04/Delugia.Nerd.Font.ttf",
-    "hash": "f6f842eb522023e6b3c6da1b15b00db20baedc45f43fd81f4203777ddb0411fb",
+    "url": "https://github.com/adam7/delugia-code/releases/download/v1910.04.1/Delugia.Nerd.Font.ttf",
+    "hash": "9b766cde4fd68aa0f710fb0742143f176a8b78f5a48cd42eab5877e533ee2900",
     "checkver": "github",
     "depends": "sudo",
     "autoupdate": {
