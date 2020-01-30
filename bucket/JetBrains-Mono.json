@@ -28,6 +28,6 @@
     "checkver": "/fonts/JetBrainsMono-([\\d.]+)\\.zip",
     "autoupdate": {
         "url": "https://download.jetbrains.com/fonts/JetBrainsMono-$version.zip",
-        "extract_dir": "JetBrainsMono-$version"
+        "extract_dir": "JetBrainsMono-$version\\ttf"
     }
 }
