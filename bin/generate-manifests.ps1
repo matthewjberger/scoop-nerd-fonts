@@ -39,6 +39,7 @@ $fontNames = @(
     "AurulentSansMono",
     "BigBlueTerminal",
     "BitstreamVeraSansMono",
+    "CascadiaCode",
     "CodeNewRoman",
     "Cousine",
     "DejaVuSansMono",
