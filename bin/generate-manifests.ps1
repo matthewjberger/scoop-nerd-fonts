@@ -34,6 +34,7 @@
 
 $fontNames = @(
     "3270",
+    "Agave",
     "AnonymousPro",
     "Arimo",
     "AurulentSansMono",
@@ -42,6 +43,7 @@ $fontNames = @(
     "CascadiaCode",
     "CodeNewRoman",
     "Cousine",
+    "DaddyTimeMono",
     "DejaVuSansMono",
     "DroidSansMono",
     "FantasqueSansMono",
@@ -53,10 +55,13 @@ $fontNames = @(
     "Hasklig",
     "HeavyData",
     "Hermit",
+    "iA-Writer",
+    "IBMPlexMono",
     "Inconsolata",
     "InconsolataGo",
     "InconsolataLGC",
     "Iosevka",
+    "JetBrainsMono",
     "Lekton",
     "LiberationMono",
     "Meslo",
@@ -76,27 +81,34 @@ $fontNames = @(
     "Terminus",
     "Tinos",
     "Ubuntu",
-    "UbuntuMono"
+    "UbuntuMono",
+    "VictorMono"
 )
+
+$frozenFiles = @(
+    "Bold",
+    "BoldItalic",
+    "CodeNewRoman",
+    "Gohu",
+    "Italic",
+    "Regular"
+)
+
 
 # Generate manifests
 $fontNames | ForEach-Object {
-    $templateString -replace "%name", $_ | Out-File -FilePath "$PSScriptRoot\..\bucket\$_-NF.json" -Encoding utf8
-}
+    # Create the manifest if it doesn't exist
+    $path = "$PSScriptRoot\..\bucket\$_-NF.json"
+    if (!(Test-Path $path)) {
+        $templateString -replace "%name", $_ | Out-File -FilePath $path -Encoding utf8
+    }
 
-# Use scoop's checkver script to autoupdate the manifests
-& $psscriptroot\checkver.ps1 * -u
+    # Update files that are not frozen
+    if (!$frozenFiles.Contains("$_")) { 
+        # Use scoop's checkver script to autoupdate the manifest
+        & $psscriptroot\checkver.ps1 "$_-NF" -u
 
-# Keep frozen files from updating
-$frozenFiles = @(
-    "Bold-NF",
-    "BoldItalic-NF",
-    "CodeNewRoman-NF",
-    "Gohu-NF",
-    "Italic-NF",
-    "Regular-NF"
-)
-
-$frozenFiles | ForEach-Object {
-    git checkout "$psscriptroot/../bucket/$_.json"
+        # Sleep to avoid 429 errors from github's REST API
+        Start-Sleep 1
+    }
 }
