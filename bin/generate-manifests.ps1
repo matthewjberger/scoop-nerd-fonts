@@ -97,5 +97,5 @@ $frozenFiles = @(
 )
 
 $frozenFiles | ForEach-Object {
-    git checkout "../bucket/$_.json"
+    git checkout "$psscriptroot/../bucket/$_.json"
 }
