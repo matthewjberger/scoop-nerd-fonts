@@ -41,6 +41,7 @@ $fontNames = @(
     "BitstreamVeraSansMono",
     "Bold",
     "BoldItalic",
+    "CascadiaCode",
     "CodeNewRoman",
     "Cousine",
     "DejaVuSansMono",
