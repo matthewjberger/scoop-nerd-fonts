@@ -88,12 +88,12 @@ $fontNames | ForEach-Object {
 
 # Keep frozen files from updating
 $frozenFiles = @(
-    "Bold",
-    "BoldItalic",
+    "Bold-NF",
+    "BoldItalic-NF",
     "CodeNewRoman-NF",
     "Gohu-NF",
-    "Italic",
-    "Regular"
+    "Italic-NF",
+    "Regular-NF"
 )
 
 $frozenFiles | ForEach-Object {
