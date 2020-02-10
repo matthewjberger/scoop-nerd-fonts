@@ -39,8 +39,6 @@ $fontNames = @(
     "AurulentSansMono",
     "BigBlueTerminal",
     "BitstreamVeraSansMono",
-    "Bold",
-    "BoldItalic",
     "CascadiaCode",
     "CodeNewRoman",
     "Cousine",
@@ -59,7 +57,6 @@ $fontNames = @(
     "InconsolataGo",
     "InconsolataLGC",
     "Iosevka",
-    "Italic",
     "Lekton",
     "LiberationMono",
     "Meslo",
@@ -72,7 +69,6 @@ $fontNames = @(
     "Overpass",
     "ProFont",
     "ProggyClean",
-    "Regular",
     "RobotoMono",
     "ShareTechMono",
     "SourceCodePro",
@@ -93,10 +89,14 @@ $fontNames | ForEach-Object {
 
 # Keep frozen files from updating
 $frozenFiles = @(
+    "Bold-NF",
+    "BoldItalic-NF",
     "CodeNewRoman-NF",
-    "Gohu-NF"
+    "Gohu-NF",
+    "Italic-NF",
+    "Regular-NF"
 )
 
 $frozenFiles | ForEach-Object {
-    git checkout "../bucket/$_.json"
+    git checkout "$psscriptroot/../bucket/$_.json"
 }
