@@ -39,8 +39,6 @@ $fontNames = @(
     "AurulentSansMono",
     "BigBlueTerminal",
     "BitstreamVeraSansMono",
-    "Bold",
-    "BoldItalic",
     "CodeNewRoman",
     "Cousine",
     "DejaVuSansMono",
@@ -58,7 +56,6 @@ $fontNames = @(
     "InconsolataGo",
     "InconsolataLGC",
     "Iosevka",
-    "Italic",
     "Lekton",
     "LiberationMono",
     "Meslo",
@@ -71,7 +68,6 @@ $fontNames = @(
     "Overpass",
     "ProFont",
     "ProggyClean",
-    "Regular",
     "RobotoMono",
     "ShareTechMono",
     "SourceCodePro",
@@ -92,8 +88,12 @@ $fontNames | ForEach-Object {
 
 # Keep frozen files from updating
 $frozenFiles = @(
+    "Bold",
+    "BoldItalic",
     "CodeNewRoman-NF",
-    "Gohu-NF"
+    "Gohu-NF",
+    "Italic",
+    "Regular"
 )
 
 $frozenFiles | ForEach-Object {
