@@ -31,7 +31,7 @@
     "autoupdate": {
         "url": "https://github.com/JetBrains/JetBrainsMono/releases/download/v$version/JetBrainsMono-$version.zip",
         "hash": {
-            "url": "$url.sha256"
+            "mode": "download"
         },
         "extract_dir": "JetBrainsMono-$version\\ttf"
     }
