@@ -1,11 +1,11 @@
 {
-    "version": "1.0.2",
+    "version": "1.0.5",
     "description": "JetBrains Mono. A typeface for developers.",
     "homepage": "https://www.jetbrains.com/lp/mono/",
     "license": "Apache-2.0",
-    "url": "https://github.com/JetBrains/JetBrainsMono/releases/download/v1.0.2/JetBrainsMono-1.0.2.zip",
-    "hash": "59f9b9762d5625eb438eedf034dbbcdcf09ed18ded994540b466872840229762",
-    "extract_dir": "JetBrainsMono-1.0.2\\ttf",
+    "url": "https://github.com/JetBrains/JetBrainsMono/releases/download/v1.0.5/JetBrainsMono-1.0.5.zip",
+    "hash": "4ea0eaf943764cd5ab011524266c12704420ba4e57da03daa0456145946022eb",
+    "extract_dir": "JetBrainsMono-1.0.5\\ttf",
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
