@@ -88,8 +88,6 @@ $fontNames = @(
 $frozenFiles = @(
     "Bold",
     "BoldItalic",
-    "CodeNewRoman",
-    "Gohu",
     "Italic",
     "Regular"
 )
