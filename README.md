@@ -16,4 +16,4 @@ Execute `bin/generate-manifests.ps1` with Powershell 3.0+ to regenerate all of t
 
 ## Notable changes
 
-The regular `CascadiaCode` (not NF) font manifests were [consolidated into a single manifest](https://github.com/matthewjberger/scoop-nerd-fonts/commit/e8c7114a2890a2d7ca035c132f4bb507a191a423). This was done because the [Cascadia Code official releases](https://github.com/microsoft/cascadia-code/releases) prior to `2004.30` had the ttf fonts attached seperately, so they had different download urls. From version `2004.30` onward, the fonts are bundled in a zip file.
+The regular `CascadiaCode` (not NF) font manifests were [consolidated into a single manifest](https://github.com/matthewjberger/scoop-nerd-fonts/commit/e8c7114a2890a2d7ca035c132f4bb507a191a423). This was done because the [Cascadia Code official releases](https://github.com/microsoft/cascadia-code/releases) prior to `2004.30` had the ttf fonts attached separately, so they had different download urls. From version `2004.30` onward, the fonts are bundled in a zip file.
