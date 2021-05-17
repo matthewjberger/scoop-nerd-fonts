@@ -1,9 +1,9 @@
 {
     "##": "Renaming .7z to .7z_ so that the archive will not be automatically extracted by Scoop.",
-    "version": "0.30.2",
+    "version": "0.31.2",
     "license": "OFL-1.1",
     "homepage": "https://github.com/be5invis/Sarasa-Gothic",
-    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.30.2/sarasa-gothic-ttf-0.31.2.7z#/dl.7z_",
+    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.31.2/sarasa-gothic-ttf-0.31.2.7z#/dl.7z_",
     "hash": "867281850dccfd14fbd02524eee944e0304d52bd273b556f7dc804625386e2a0",
     "checkver": "github",
     "autoupdate": {
