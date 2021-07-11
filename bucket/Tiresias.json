@@ -1,6 +1,6 @@
 {
     "version": "0.1",
-    "description": "Typeface degined for people with weak vision. Developed by The Royal National Institute for the Blind (RNIB).",
+    "description": "Typeface designed for people with weak vision. Developed by The Royal National Institute for the Blind (RNIB).",
     "homepage": "https://en.wikipedia.org/wiki/Tiresias_(typeface)",
     "license": "GPL-3.0-or-later",
     "url": "http://deb.debian.org/debian/pool/main/f/fonts-tiresias/fonts-tiresias_0.1.orig.tar.gz",
@@ -36,7 +36,7 @@
             "    Remove-Item \"$env:WINDIR\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "",
-            "Write-Host \"Font 'jf-openhunnin' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+            "Write-Host \"Font 'Tiresias' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
         ]
     }
 }
