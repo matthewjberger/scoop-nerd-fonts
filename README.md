@@ -1,6 +1,6 @@
 # Scoop bucket for Nerd Fonts
 
-This repo contains manifests for installing Nerd Fonts and various other fonts using the [scoop package manager](https://github.com/lukesampson/scoop) for Windows.
+This repo contains manifests for installing [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) and various other fonts using the [scoop package manager](https://github.com/lukesampson/scoop) for Windows.
 
 To add this bucket:
 
