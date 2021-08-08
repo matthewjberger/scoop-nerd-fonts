@@ -1,0 +1,17 @@
+name: Commented Pull Request
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  pullRequestHandler:
+    name: Pull Request Validator
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Pull Request Validation
+        uses: Ash258/Scoop-GithubActions@stable-win
+        if: startsWith(github.event.comment.body, '/verify')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

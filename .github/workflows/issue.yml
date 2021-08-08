@@ -1,0 +1,17 @@
+name: Issues
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  issueHandler:
+    runs-on: windows-latest
+    name: Issue Verification
+    steps:
+      - uses: actions/checkout@main
+      - name: Verify Issue
+        uses: Ash258/Scoop-GithubActions@stable-win
+        if: github.event.action == 'opened' || (github.event.action == 'labeled' && contains(github.event.issue.labels.*.name, 'verify'))
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
