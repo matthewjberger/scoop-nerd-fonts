@@ -1,36 +1,52 @@
-﻿$templateString = @"
-{
-    "version": "0.0",
-    "license": "MIT",
-    "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": " ",
-    "hash": " ",
-    "checkver": "github",
-    "depends": "sudo",
-    "autoupdate": {
-        "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/%name.zip"
-    },
-    "installer": {
-        "script": [
-            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install `$app'\"; exit 1 }",
-            "Get-ChildItem `$dir -filter '*Windows Compatible.*' | ForEach-Object {",
-            "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name `$_.Name.Replace(`$_.Extension, ' (TrueType)') -Value `$_.Name -Force | Out-Null",
-            "    Copy-Item `$_.FullName -destination \"`$env:windir\\Fonts\"",
-            "}"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall `$app'\"; exit 1 }",
-            "Get-ChildItem `$dir -filter '*Windows Compatible.*' | ForEach-Object {",
-            "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name `$_.Name.Replace(`$_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
-            "    Remove-Item \"`$env:windir\\Fonts\\`$(`$_.Name)\" -Force -ErrorAction SilentlyContinue",
-            "}",
-            "Write-Host \"The '`$(`$app.Replace('-NF', ''))' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
-        ]
+﻿function Export-FontManifest {
+    Param (
+        [ValidateNotNullOrEmpty()]
+        [string]$Name,
+        [ValidateNotNullOrEmpty()]
+        [string]$Path,
+        [switch]$OverwriteExisting
+    )
+
+    $templateData = [ordered]@{
+        "version"    = "0.0"
+        "license"    = "MIT"
+        "homepage"   = "https://github.com/ryanoasis/nerd-fonts"
+        "url"        = " "
+        "hash"       = " "
+        "checkver"   = "github"
+        "depends"    = "sudo"
+        "autoupdate" = @{
+            "url"    = "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/${Name}.zip"
+        }
+        "installer"  = @{
+            "script" =
+@'
+                if(!(is_admin)) { error "Admin rights are required, please run 'sudo scoop install $app'"; exit 1 }
+                Get-ChildItem $dir -filter '*Windows Compatible.*' | ForEach-Object {
+                    New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null
+                    Copy-Item $_.FullName -destination "$env:windir\Fonts"
+                }
+'@
+        }
+        "uninstaller" = @{
+            "script"  =
+@'
+                if(!(is_admin)) { error "Admin rights are required, please run 'sudo scoop uninstall $app'"; exit 1 }
+                Get-ChildItem $dir -filter '*Windows Compatible.*' | ForEach-Object {
+                    Remove-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue
+                    Remove-Item "$env:windir\Fonts\$($_.Name)" -Force -ErrorAction SilentlyContinue
+                }
+                Write-Host "The '$($app.Replace('-NF', ''))' Font family has been uninstalled and will not be present after restarting your computer." -Foreground Magenta
+'@
+        }
+    }
+
+    if (! (Test-Path $Path)) {
+        ConvertTo-Json -InputObject $templateData | Set-Content -LiteralPath $Path -Encoding UTF8
+    } elseif ($OverwriteExisting) {
+        ConvertTo-Json -InputObject $templateData | Set-Content -LiteralPath $Path -Encoding UTF8 -Force
     }
 }
-"@
 
 $fontNames = @(
     "3270",
@@ -96,10 +112,7 @@ $frozenFiles = @(
 # Generate manifests
 $fontNames | ForEach-Object {
     # Create the manifest if it doesn't exist
-    $path = "$PSScriptRoot\..\bucket\$_-NF.json"
-    if (!(Test-Path $path)) {
-        $templateString -replace "%name", $_ | Out-File -FilePath $path -Encoding utf8
-    }
+    Export-FontManifest -Name $_ -Path "$PSScriptRoot\..\bucket\$_-NF.json"
 
     # Update files that are not frozen
     if (!$frozenFiles.Contains("$_")) { 
