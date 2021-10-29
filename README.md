@@ -12,7 +12,9 @@ scoop bucket add nerd-fonts
 
 ## Generating font manifests
 
-Execute `bin/generate-manifests.ps1` with Powershell 3.0+ to regenerate all of the manifests in this repository from the template (within the same file).
+Execute `bin/generate-manifests.ps1` with Powershell 3.0+ to regenerate a subset of the manifests in this repository from the template (within the same file).
+
+Over time this repo has accumulated a variety of fonts, not all of which are nerd fonts. The manifest generation is specifically for nerd fonts! 
 
 ## Notable changes
 
