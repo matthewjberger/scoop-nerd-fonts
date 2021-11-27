@@ -8,7 +8,7 @@ To add this bucket:
 scoop bucket add nerd-fonts
 ```
 
-#### Note: Admin rights are required to install these fonts, because their installers modify the registry. Additionally, restarting your computer after uninstalling a font is necessary for the font to be fully removed.
+#### Note: Admin rights are required to install these fonts for Windows version before Windows 10 1809, because their installers modify the `HKEY_LOCAL_MACHINE` registry. Additionally, restarting your computer after uninstalling a font is necessary for the font to be fully removed.
 
 ## Generating font manifests
 
