@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: Pull Request Validation
-        uses: Ash258/Scoop-GithubActions@stable-win
+        uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
