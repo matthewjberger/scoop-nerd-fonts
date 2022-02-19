@@ -101,25 +101,14 @@ $fontNames = @(
     "VictorMono"
 )
 
-$frozenFiles = @(
-    "Bold",
-    "BoldItalic",
-    "Italic",
-    "Regular"
-)
-
-
 # Generate manifests
 $fontNames | ForEach-Object {
     # Create the manifest if it doesn't exist
     Export-FontManifest -Name $_ -Path "$PSScriptRoot\..\bucket\$_-NF.json"
 
-    # Update files that are not frozen
-    if (!$frozenFiles.Contains("$_")) { 
-        # Use scoop's checkver script to autoupdate the manifest
-        & $psscriptroot\checkver.ps1 "$_-NF" -u
+    # Use scoop's checkver script to autoupdate the manifest
+    & $psscriptroot\checkver.ps1 "$_-NF" -u
 
-        # Sleep to avoid 429 errors from github's REST API
-        Start-Sleep 1
-    }
+    # Sleep to avoid 429 errors from github's REST API
+    Start-Sleep 1
 }
