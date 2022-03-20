@@ -4,7 +4,7 @@
   "homepage": "https://github.com/IBM/plex",
   "url": "https://github.com/IBM/plex/releases/download/v6.0.0/TrueType.zip",
   "hash": "16253500de140321175bb94e65fd227c6b12efc050eb298c20322dbf3713a8e0",
-  "extract_dir": "TrueType/IBM-Plex-Sans-JP",
+  "extract_dir": "TrueType/IBM-Plex-Sans-JP/hinted",
   "checkver": "github",
   "autoupdate": {
     "url": "https://github.com/IBM/plex/releases/download/v$version/TrueType.zip"
