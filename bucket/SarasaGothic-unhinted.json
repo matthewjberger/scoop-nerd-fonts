@@ -8,7 +8,7 @@
     "notes": [
         "You are installing the unhinted TTF version of Sarasa Gothic.",
         "The TTF version has the best compatibility, but takes a large disk space (about 6 GB)",
-        "For saving disk space, we recommend installing the TTC version (requires Win10 or above)",
+        "For saving disk space, we recommend installing the unhinted TTC version (takes about 600 MB, requires Win10 or above)",
         "To install it, run: scoop install SarasaGothic-ttc-unhinted"
     ],
     "installer": {
