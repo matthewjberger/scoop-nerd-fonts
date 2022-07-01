@@ -1,6 +1,6 @@
 {
     "##": "This package has to be updated manually since autoupdate does not support updating multiple urls.",
-    "version": "1.001",
+    "version": "1.002",
     "license": "OFL-1.1",
     "homepage": "https://github.com/adobe-fonts/source-han-mono",
     "url": [
