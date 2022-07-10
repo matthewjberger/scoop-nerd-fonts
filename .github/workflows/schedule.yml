@@ -4,6 +4,8 @@ on:
   # runs every hour
   schedule:
     - cron: "0 * * * *"
+  # allow manually trigger
+  workflow_dispatch:
 
 jobs:
   excavate:
