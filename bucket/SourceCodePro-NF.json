@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip",
-    "hash": "a771689e0bc1d020e2082c705e2fb6113b7f8fbc1c56c639957f12546bd39619",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/SourceCodePro.zip",
+    "hash": "e725037953481a9969a58b10b48b2045411e53841e1d8dcfb0a3276ece2a69fd",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/SourceCodePro.zip"
