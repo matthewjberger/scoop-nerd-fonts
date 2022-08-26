@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SpaceMono.zip",
-    "hash": "b3bee63e157aefd83424b3b02db90007e21452fe23df7707657e28dd9e70b5f6",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/SpaceMono.zip",
+    "hash": "cd881e3311fee0abe7ad03fb92b75b946ad18fbd9a861c52a697f73623677d82",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/SpaceMono.zip"
