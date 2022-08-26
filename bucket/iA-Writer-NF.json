@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/iA-Writer.zip",
-    "hash": "9f18ad9964ac0a09ec321b6d1ca68a25e4c1b2a019b575032b9b75c37bd69332",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/iA-Writer.zip",
+    "hash": "9a21b4c055095f34d8f1a28a4f9e027fb8fd77d28bef6d8bcd77f38d7d4bad46",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/iA-Writer.zip"
