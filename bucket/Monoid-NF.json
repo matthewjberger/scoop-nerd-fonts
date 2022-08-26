@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Monoid.zip",
-    "hash": "ad111056f16d6174482aa5c4ae23b0300e71acc095a20d698a15f3e8a440f154",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/Monoid.zip",
+    "hash": "994e71377f838b27f14b2c8bda87e572bdf5f7a8223183f79ba08f168ce11cd6",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Monoid.zip"
