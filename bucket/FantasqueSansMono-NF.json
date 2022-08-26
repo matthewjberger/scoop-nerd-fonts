@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip",
-    "hash": "66bf67eb5031c1614e5f76b4e011860dd249a61350e5d921331c443b6609f090",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/FantasqueSansMono.zip",
+    "hash": "4f894856cd0dc4f571abd36a5d763a67cd39ac778b30fc22b178313b836ca486",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/FantasqueSansMono.zip"
