@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Cousine.zip",
-    "hash": "c16fb6d228178013684a7b71b6ebb6ee5d81f1316d8f7221836da8a5737f204b",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/Cousine.zip",
+    "hash": "64ff0bdda9890f86e5cce5f3b7890518c3cec245cf115c85c5982c889d42cc6f",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Cousine.zip"
