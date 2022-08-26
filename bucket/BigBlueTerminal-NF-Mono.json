@@ -1,9 +1,9 @@
 {
-    "version": "2.2.0",
+    "version": "2.2.1",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/BigBlueTerminal.zip",
-    "hash": "c7285b322e421e38dcac063debeb7a0b31ba34401d29506bfc0deca3d10ac40f",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.1/BigBlueTerminal.zip",
+    "hash": "1c256bde692058c21c4801b3ca5293ef555cb51a451e06ae7f33d046f0fb6c2b",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/BigBlueTerminal.zip"
