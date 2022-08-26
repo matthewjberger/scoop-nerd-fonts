@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/MPlus.zip",
-    "hash": "d88b440d40747fd196bc86a741a6c0233737600c3b20e50e7512d7ea3e74b90e",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/MPlus.zip",
+    "hash": "8d38e8b52708a738f43345c1edb1bca591978a5f90a724cbbee96a81a9716dab",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/MPlus.zip"
