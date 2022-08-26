@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Arimo.zip",
-    "hash": "683a1b4f33dcf20d6ceee89161786b1684a22bc7296efd5fd4c9d766ba6bf4cc",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/Arimo.zip",
+    "hash": "e0333141afae10c6e6b063c55610d7f843157dee50471ca7e44df6663d37a1e6",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Arimo.zip"
