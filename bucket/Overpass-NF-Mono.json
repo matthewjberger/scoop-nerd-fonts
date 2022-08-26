@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Overpass.zip",
-    "hash": "b5f7522a2e884562cfca4c32fa708d537b884efb5d055ad617a3b503d9f842f7",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/Overpass.zip",
+    "hash": "5377fb2952bfa05c1a10c574a64cc6a131848006c54f98e222a66768c16c30e6",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Overpass.zip"
