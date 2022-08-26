@@ -1,9 +1,9 @@
 {
-    "version": "2.2.0",
+    "version": "2.2.1",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/FiraMono.zip",
-    "hash": "5fd014fa154e8defb1031bb696033c3d64e1e5dace59baa8efed497eecf8f80c",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.1/FiraMono.zip",
+    "hash": "e60a9f8cd097c2cbaa54dc08dc861d6d02809cfc0d35d60410648cefb1855c23",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/FiraMono.zip"
