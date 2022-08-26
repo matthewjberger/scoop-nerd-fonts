@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Noto.zip",
-    "hash": "1f90f44ff557dd0d8f2ac50822c1ee53aa898a907e6d308e96913a479c65beca",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/Noto.zip",
+    "hash": "373d876b3675f71c5a8fb5da17a0a9bdcb5963818ffcc42aa24ef5e4f16ea57e",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Noto.zip"
