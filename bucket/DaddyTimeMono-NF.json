@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DaddyTimeMono.zip",
-    "hash": "644a8385af780abaa158457327a3d095381004eb3f7a45fdeb8e20f0a7e7dbd8",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/DaddyTimeMono.zip",
+    "hash": "8036fdca81eafa8f68a834a6a371fcbec5a9c0515c4a6ac41f61aa94524f0897",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/DaddyTimeMono.zip"
