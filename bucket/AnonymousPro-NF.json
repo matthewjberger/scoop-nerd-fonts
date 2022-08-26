@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/AnonymousPro.zip",
-    "hash": "b51b3dd9aa5bcf061240d8dfcc203e78b085eeb97a76d91f6ad8cd9473467668",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/AnonymousPro.zip",
+    "hash": "cf6211df88bce6bbe970f482b911dcf7e22ab5cdb528b5c94ff00d39f22b0070",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/AnonymousPro.zip"
