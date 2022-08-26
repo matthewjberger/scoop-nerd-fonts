@@ -1,9 +1,9 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/VictorMono.zip",
-    "hash": "386d1327671165989cd197a22352098b2c064b51cd27504bcb1cbbf7f814e9a3",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/VictorMono.zip",
+    "hash": "9cff2e577c82d0a42907ccc750dda28b2b456f3c048fb7682d2064931f1124ae",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/VictorMono.zip"
