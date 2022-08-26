@@ -1,9 +1,9 @@
 {
-    "version": "2.2.0",
+    "version": "2.2.1",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/Inconsolata.zip",
-    "hash": "96a0eb04211175b5e7e09ce3daa39e4a54a2ec5273cb4187f6dc814df1305013",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.1/Inconsolata.zip",
+    "hash": "31b11a9d95e863e42ff1e626673cf02feab63a6ecfc56202e990df73403dc403",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/Inconsolata.zip"
