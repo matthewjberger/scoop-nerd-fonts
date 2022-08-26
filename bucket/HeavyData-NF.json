@@ -1,9 +1,9 @@
 {
-    "version": "2.2.0",
+    "version": "2.2.1",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/HeavyData.zip",
-    "hash": "050b27f673451d9fbbe5a3248612e7e2cd38038578e08d2934390f7b4e9aadf9",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.1/HeavyData.zip",
+    "hash": "5717c64f0b98493416a96b061b7d3432eb1a5c3dc5aa830c8765078c69dc64fe",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/HeavyData.zip"
