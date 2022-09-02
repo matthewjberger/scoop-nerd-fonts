@@ -1,9 +1,9 @@
 {
-    "version": "2.2.1",
+    "version": "2.2.0",
     "license": "MIT",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.1/IBMPlexMono.zip",
-    "hash": "56f87ab8dfd3070105006794954fbeb5f2adcddba342231622b8f1eec6589101",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/IBMPlexMono.zip",
+    "hash": "76152ae89e5fc1e1c2375ceb162a211b6f6af2fceb37b76b551ef998c904e595",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/IBMPlexMono.zip"
