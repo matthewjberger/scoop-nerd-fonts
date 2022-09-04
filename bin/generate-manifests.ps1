@@ -1,51 +1,99 @@
-﻿function Export-FontManifest {
+﻿#Requires -Version 3
+
+<#
+.SYNOPSIS
+    Generate manifests of patched fonts provided by nerd fonts repository.
+.PARAMETER OverwriteExisting
+    Whether to overwrite existing manifests.
+.EXAMPLE
+    PS BUCKETROOT> .\bin\generate-manifests.ps1
+    Generate manifests only if the desired manifest does not exist.
+.EXAMPLE
+    PS BUCKETROOT> .\bin\generate-manifests.ps1 -OverwriteExisting
+    Force re-generate all manifests.
+#>
+Param (
+    [switch]$OverwriteExisting
+)
+
+function Export-FontManifest {
     Param (
         [ValidateNotNullOrEmpty()]
         [string]$Name,
         [ValidateNotNullOrEmpty()]
-        [string]$Path,
+        [switch]$IsMono,
         [switch]$OverwriteExisting
     )
 
+    $fullName = if ($IsMono) { "$Name-NF-Mono" } else { "$Name-NF" }
+    $path = "$PSScriptRoot\..\bucket\$fullName.json"
+    $filter = if ($IsMono) { "'*Mono Windows Compatible.*'" } else { "'*Complete Windows Compatible.*'" }
+
     $templateData = [ordered]@{
-        "version"    = "0.0"
-        "license"    = "MIT"
-        "homepage"   = "https://github.com/ryanoasis/nerd-fonts"
-        "url"        = " "
-        "hash"       = " "
-        "checkver"   = "github"
-        "depends"    = "sudo"
-        "autoupdate" = @{
-            "url"    = "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/${Name}.zip"
+        "version"     = "0.0"
+        "license"     = "MIT"
+        "homepage"    = "https://github.com/ryanoasis/nerd-fonts"
+        "url"         = " "
+        "hash"        = " "
+        "checkver"    = "github"
+        "autoupdate"  = @{
+            "url" = "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/${Name}.zip"
         }
-        "installer"  = @{
-            "script" =
-@'
-                if(!(is_admin)) { error "Admin rights are required, please run 'sudo scoop install $app'"; exit 1 }
-                Get-ChildItem $dir -filter '*Windows Compatible.*' | ForEach-Object {
-                    New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null
-                    Copy-Item $_.FullName -destination "$env:windir\Fonts"
-                }
-'@
+        "installer"   = @{
+            "script" = @(
+                '$currentBuildNumber = [int] (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").CurrentBuildNumber',
+                '$windows1809BuildNumber = 17763',
+                '$isPerUserFontInstallationSupported = $currentBuildNumber -ge $windows1809BuildNumber',
+                '$isFontInstallationForAllUsers = $global -or !$isPerUserFontInstallationSupported',
+                'if ($isFontInstallationForAllUsers -and !(is_admin)) {',
+                '    error "Administrator rights are required to install $app."',
+                '    exit 1',
+                '}'
+                '$fontInstallDir = if ($isFontInstallationForAllUsers) { "$env:windir\Fonts" } else { "$env:LOCALAPPDATA\Microsoft\Windows\Fonts" }',
+                '$registryRoot = if ($isFontInstallationForAllUsers) { "HKLM" } else { "HKCU" }',
+                '$registryKey = "${registryRoot}:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts"',
+                'New-Item $fontInstallDir -ItemType Directory -ErrorAction SilentlyContinue | Out-Null',
+                "Get-ChildItem `$dir -Filter $filter | ForEach-Object {",
+                '    $value = if ($isFontInstallationForAllUsers) { $_.Name } else { "$fontInstallDir\$($_.Name)" }',
+                '    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, '' (TrueType)'') -Value $value -Force | Out-Null',
+                '    Copy-Item $_.FullName -Destination $fontInstallDir',
+                '}'
+            )
         }
         "uninstaller" = @{
-            "script"  =
-@'
-                if(!(is_admin)) { error "Admin rights are required, please run 'sudo scoop uninstall $app'"; exit 1 }
-                Get-ChildItem $dir -filter '*Windows Compatible.*' | ForEach-Object {
-                    Remove-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue
-                    Remove-Item "$env:windir\Fonts\$($_.Name)" -Force -ErrorAction SilentlyContinue
-                }
-                Write-Host "The '$($app.Replace('-NF', ''))' Font family has been uninstalled and will not be present after restarting your computer." -Foreground Magenta
-'@
+            "script" = @(
+                '$currentBuildNumber = [int] (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").CurrentBuildNumber',
+                '$windows1809BuildNumber = 17763',
+                '$isPerUserFontInstallationSupported = $currentBuildNumber -ge $windows1809BuildNumber',
+                '$isFontInstallationForAllUsers = $global -or !$isPerUserFontInstallationSupported',
+                'if ($isFontInstallationForAllUsers -and !(is_admin)) {',
+                '    error "Administrator rights are required to uninstall $app."',
+                '    exit 1',
+                '}',
+                '$fontInstallDir = if ($isFontInstallationForAllUsers) { "$env:windir\Fonts" } else { "$env:LOCALAPPDATA\Microsoft\Windows\Fonts" }',
+                '$registryRoot = if ($isFontInstallationForAllUsers) { "HKLM" } else { "HKCU" }',
+                '$registryKey = "${registryRoot}:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts"',
+                "Get-ChildItem `$dir -Filter $filter | ForEach-Object {",
+                '    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, '' (TrueType)'') -Force -ErrorAction SilentlyContinue',
+                '    Remove-Item "$fontInstallDir\$($_.Name)" -Force -ErrorAction SilentlyContinue',
+                '}',
+                'Write-Host "The ''$($app.Replace(''-NF'', ''''))'' Font family has been uninstalled and will not be present after restarting your computer." -Foreground Magenta'
+            )
         }
     }
 
-    if (! (Test-Path $Path)) {
-        ConvertTo-Json -InputObject $templateData | Set-Content -LiteralPath $Path -Encoding UTF8
+    if (! (Test-Path $path)) {
+        # Create the manifest if it doesn't exist
+        ConvertTo-Json -InputObject $templateData | Set-Content -LiteralPath $path -Encoding UTF8
     } elseif ($OverwriteExisting) {
-        ConvertTo-Json -InputObject $templateData | Set-Content -LiteralPath $Path -Encoding UTF8 -Force
+        ConvertTo-Json -InputObject $templateData | Set-Content -LiteralPath $path -Encoding UTF8 -Force
     }
+
+    # Use scoop's checkver script to autoupdate the manifest
+    & $PSScriptRoot\checkver.ps1 $fullName -u
+
+    # Sleep to avoid 429 errors from github's REST API
+    Start-Sleep 1
 }
 
 $fontNames = @(
@@ -103,12 +151,6 @@ $fontNames = @(
 
 # Generate manifests
 $fontNames | ForEach-Object {
-    # Create the manifest if it doesn't exist
-    Export-FontManifest -Name $_ -Path "$PSScriptRoot\..\bucket\$_-NF.json"
-
-    # Use scoop's checkver script to autoupdate the manifest
-    & $psscriptroot\checkver.ps1 "$_-NF" -u
-
-    # Sleep to avoid 429 errors from github's REST API
-    Start-Sleep 1
+    Export-FontManifest -Name $_ -OverwriteExisting:$OverwriteExisting
+    Export-FontManifest -Name $_ -IsMono -OverwriteExisting:$OverwriteExisting
 }
