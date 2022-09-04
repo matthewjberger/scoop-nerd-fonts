@@ -48,7 +48,7 @@ function Export-FontManifest {
                 'if ($isFontInstallationForAllUsers -and !(is_admin)) {',
                 '    error "Administrator rights are required to install $app."',
                 '    exit 1',
-                '}'
+                '}',
                 '$fontInstallDir = if ($isFontInstallationForAllUsers) { "$env:windir\Fonts" } else { "$env:LOCALAPPDATA\Microsoft\Windows\Fonts" }',
                 '$registryRoot = if ($isFontInstallationForAllUsers) { "HKLM" } else { "HKCU" }',
                 '$registryKey = "${registryRoot}:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts"',
