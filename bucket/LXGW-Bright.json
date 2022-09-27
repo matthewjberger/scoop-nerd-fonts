@@ -1,5 +1,5 @@
 {
-    "version": "4.125",
+    "version": "4.132",
     "description": "An open-source Simplified Chinese font. Combination of LXGW WenKai Lite (霞鹜文楷 Lite) and Ysabeau Office",
     "homepage": "https://github.com/lxgw/LxgwBright",
     "license": "OFL-1.1",
@@ -12,12 +12,12 @@
         "https://raw.githubusercontent.com/lxgw/LxgwBright/main/LXGWBright/LXGWBright-SemiLightItalic.otf"
     ],
     "hash": [
-        "aa022e5aa518e0bb64466363c655c70f07b44bbd3674622f68a6a0cf2532fcdf",
-        "dd4402bb1d58a2c89a725f64573605ccea2931a88c44b1a8a6f8031003f4d001",
-        "e1bb4387c031fc74abe82a56c31bad709d9675640475d364e315f74288d9139d",
-        "ab4fe8f74becc896ce6b4c401c05dc003b1331da6f8ea058ea7b1954e4691095",
-        "80a35e96e3b042b626dd0aa715261a2b72810283400b58bcbe9ed3249f8da835",
-        "72d3fee6818b8d1bf153ae2d6bbe869da02f359d999b5cbc3da01c96f6320558"
+        "9222df8b832e5148fdd14441485909269d186ee55402ba6a6d9389822526e87e",
+        "99ac756864ab61ab6fdcc4f5046c431d8331cd3f719ccacabfb0eab4a4532276",
+        "1ae42da8a706596e75c3ad5dd0f7f31be322d06086d16e3d3e3b6812f8710082",
+        "60357ed47a3b924e4b19e7b2a6bcb89c14091c3ec5f7f79613421a15751ddf22",
+        "310ba7df66b9dc1623ba44a54ac8e22d57ac4db3ad28e532f7d6ee3609dbfeee",
+        "183ed325c73f322d0182c01ac735806de3fd03cbf179314371ccffe5da30154b"
     ],
     "installer": {
         "script": [
