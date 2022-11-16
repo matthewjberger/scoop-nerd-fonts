@@ -50,9 +50,15 @@
         ]
     },
     "checkver": {
-        "url": "https://scoop-apps.vercel.app/atelier-anchor/smiley-sans",
-        "regex": "(?sm)/atelier-anchor/smiley-sans/actions/runs/(?<runid>\\d+).+datetime=\"(?<year>\\d+).(?<month>\\d+).(?<day>\\d+).*?commit/(?<sha>[0-9a-f]{7})",
-        "replace": "${year}${month}${day}.${sha}"
+        "url": "https://api.github.com/repos/atelier-anchor/smiley-sans/actions/workflows/main.yml/runs?branch=dev&status=success",
+        "script": [
+            "$runid = json_path $page $.workflow_runs[0].id",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "Write-Output $runid $date $sha"
+        ],
+        "regex": "^(?<runid>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${year}${month}${day}.${hash}"
     },
     "autoupdate": {
         "url": "https://nightly.link/atelier-anchor/smiley-sans/actions/runs/$matchRunid/smiley-sans.zip"
