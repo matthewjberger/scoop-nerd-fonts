@@ -62,7 +62,9 @@
             "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
-            "Write-Host \"Font 'Rounded-L M+' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+            "if ($cmd -eq \"uninstall\") {",
+            "    Write-Host \"Font 'Rounded-L M+' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "}"
         ]
     },
     "checkver": "https://osdn.jp/downloads/users/8/(?<tag>\\d+)/rounded-l-mplus-(\\d{8}).7z",
