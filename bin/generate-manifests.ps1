@@ -144,6 +144,7 @@ $fontNames = @(
     "JetBrainsMono",
     "Lekton",
     "LiberationMono",
+    "Lilex",
     "Meslo",
     "Monofur",
     "Monoid",
