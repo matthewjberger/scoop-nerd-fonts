@@ -93,7 +93,9 @@ function Export-FontManifest {
                 '    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, '' (TrueType)'') -Force -ErrorAction SilentlyContinue',
                 '    Remove-Item "$fontInstallDir\$($_.Name)" -Force -ErrorAction SilentlyContinue',
                 '}',
-                'Write-Host "The ''$($app.Replace(''-NF'', ''''))'' Font family has been uninstalled and will not be present after restarting your computer." -Foreground Magenta'
+                'if ($cmd -eq "uninstall") {',
+                '    Write-Host "The ''$($app.Replace(''-NF'', ''''))'' Font family has been uninstalled and will not be present after restarting your computer." -Foreground Magenta',
+                '}'
             )
         }
     }
@@ -164,6 +166,11 @@ $fontNames = @(
     "Ubuntu",
     "UbuntuMono",
     "VictorMono"
+)
+
+# FIXME: test
+$fontNames = @(
+    "3270"
 )
 
 # Generate manifests
