@@ -1,4 +1,4 @@
-﻿#Requires -Version 3
+#Requires -Version 3
 
 <#
 .SYNOPSIS
@@ -166,11 +166,6 @@ $fontNames = @(
     "Ubuntu",
     "UbuntuMono",
     "VictorMono"
-)
-
-# FIXME: test
-$fontNames = @(
-    "3270"
 )
 
 # Generate manifests
