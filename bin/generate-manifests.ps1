@@ -25,20 +25,24 @@ function Export-FontManifest {
         [switch]$OverwriteExisting
     )
 
+    $description = "Nerd Fonts patched '$Name' Font family."
+    if ($IsMono) {
+        $description += " (Monospace version, Nerd Fonts Symbol/Icon will be always 1 cell wide)"
+    } else {
+        $description += " (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)"
+    }
+
     $fullName = if ($IsMono) { "$Name-NF-Mono" } else { "$Name-NF" }
     $path = "$PSScriptRoot\..\bucket\$fullName.json"
     $filter = if ($IsMono) { "'*Mono Windows Compatible.*'" } else { "'*Complete Windows Compatible.*'" }
 
     $templateData = [ordered]@{
         "version"     = "0.0"
-        "license"     = "MIT"
+        "description" = $description
         "homepage"    = "https://github.com/ryanoasis/nerd-fonts"
+        "license"     = "MIT"
         "url"         = " "
         "hash"        = " "
-        "checkver"    = "github"
-        "autoupdate"  = @{
-            "url" = "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/${Name}.zip"
-        }
         "installer"   = @{
             "script" = @(
                 '$currentBuildNumber = [int] (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").CurrentBuildNumber',
@@ -97,6 +101,10 @@ function Export-FontManifest {
                 '    Write-Host "The ''$($app.Replace(''-NF'', ''''))'' Font family has been uninstalled and will not be present after restarting your computer." -Foreground Magenta',
                 '}'
             )
+        }
+        "checkver"    = "github"
+        "autoupdate"  = @{
+            "url" = "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/${Name}.zip"
         }
     }
 
