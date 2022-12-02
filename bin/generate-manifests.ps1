@@ -82,7 +82,7 @@ function Export-FontManifest {
                 '$registryKey = "${registryRoot}:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts"',
                 'New-Item $fontInstallDir -ItemType Directory -ErrorAction SilentlyContinue | Out-Null',
                 "Get-ChildItem `$dir -Filter $filter | ForEach-Object {",
-                '    $value = if ($isFontInstallationForAllUsers) { $_.Name } else { "$fontInstallDir\$($_.Name)" }',
+                '    $value = if ($global) { $_.Name } else { "$fontInstallDir\$($_.Name)" }',
                 '    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, '' (TrueType)'') -Value $value -Force | Out-Null',
                 '    Copy-Item $_.FullName -Destination $fontInstallDir',
                 '}'
