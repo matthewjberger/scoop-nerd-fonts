@@ -34,7 +34,7 @@ function Export-FontManifest {
 
     $fullName = if ($IsMono) { "$Name-NF-Mono" } else { "$Name-NF" }
     $path = "$PSScriptRoot\..\bucket\$fullName.json"
-    $filter = if ($IsMono) { "'*Mono Windows Compatible.*'" } else { "'*Complete Windows Compatible.*'" }
+    $filter = if ($IsMono) { "'*Mono Windows Compatible*'" } else { "'*Complete Windows Compatible*'" }
 
     $templateData = [ordered]@{
         "version"     = "0.0"
