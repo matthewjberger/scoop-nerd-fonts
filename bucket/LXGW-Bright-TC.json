@@ -1,5 +1,5 @@
 {
-    "version": "4.134.3",
+    "version": "4.154",
     "description": "An open-source Traditional Chinese font. Combination of LXGW WenKai TC (霞鹜文楷 TC) and Ysabeau Office",
     "homepage": "https://github.com/lxgw/LxgwBright",
     "license": "OFL-1.1",
@@ -12,12 +12,12 @@
         "https://raw.githubusercontent.com/lxgw/LxgwBright/main/LXGWBrightTC/LXGWBrightTC-SemiLightItalic.otf"
     ],
     "hash": [
-        "fc0af8b1efaaf2ee6652f23153c1924baa8a910573ae7cf51d9ca2cedf8ec1ac",
-        "b5e665dd077daf1f33f5e2d4458de71cf85e59a5c9802a0075a07da6a312d412",
-        "4cf8e36fcfebf7c62fe538980a12ea8e35aaad052fc67921e90b6eed5e7144ef",
-        "e642988bd23f59d56bfaf7d0db8d8434f3229f20481f6e2797499e1316494c92",
-        "978a919d03c870b913893ecb78a3b015984a3c133c03170475a5fce232df5c8f",
-        "88ead881ccfe06a22fa21a46b0f129e038e0b8c0b4bd77afe4d61248cefb4cc7"
+        "b88fc068c234399b0b90687b52ba3f87f3a5d7f524da3ffdc9289c359a68d25d",
+        "06bc62cb30ace390777f7adbc1f0379e7552b0f270ab1bd429679c629fcd84bd",
+        "36e7944996a17193056bfd829e201789a8c8ce08723375391abe9f8ccca8fbbf",
+        "e9c16da2633ceebddbe0a269a14dc0ea027f0a88d3f51bcb3f44db0f673e4b50",
+        "53ec6078ea3c8a164f98775aed9adc3d557d93a17f445de36e6470844501de88",
+        "c261b9e9ea6fefeef1926f937eb603a9f6c1b666cecf12c0b6fad8df050b6391"
     ],
     "installer": {
         "script": [
