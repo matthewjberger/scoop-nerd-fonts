@@ -1,9 +1,9 @@
 {
-    "version": "2.3.0",
+    "version": "2.3.1",
     "description": "Nerd Fonts patched 'Agave' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.0/Agave.zip",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.1/Agave.zip",
     "hash": "615f18e3c2a3dc02440c32d64b81e8979f9c987072c4f547851974bd3403252b",
     "installer": {
         "script": [
