@@ -1,9 +1,9 @@
 {
-    "version": "2.3.0",
+    "version": "2.3.1",
     "description": "Nerd Fonts patched 'InconsolataLGC' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.0/InconsolataLGC.zip",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.1/InconsolataLGC.zip",
     "hash": "d32989cb851df7ce372e706e7d1f009c272e3e5a9d22c540dc52f431f7f14978",
     "installer": {
         "script": [
