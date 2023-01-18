@@ -1,9 +1,9 @@
 {
-    "version": "2.3.0",
+    "version": "2.3.1",
     "description": "Nerd Fonts patched 'LiberationMono' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.0/LiberationMono.zip",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.1/LiberationMono.zip",
     "hash": "598959cb069aee2f14dfc0a9ee19b6229ac269290766421a8b0ec112dcc4b11a",
     "installer": {
         "script": [
