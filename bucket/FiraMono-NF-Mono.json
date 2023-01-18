@@ -1,9 +1,9 @@
 {
-    "version": "2.3.0",
+    "version": "2.3.1",
     "description": "Nerd Fonts patched 'FiraMono' Font family. (Monospace version, Nerd Fonts Symbol/Icon will be always 1 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.0/FiraMono.zip",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.1/FiraMono.zip",
     "hash": "27cf672a21a7c653b1d00debef8fabe0b578180044e80a3fa9bc79ea9bd68432",
     "installer": {
         "script": [
