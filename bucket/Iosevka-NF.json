@@ -1,10 +1,10 @@
 {
-    "version": "2.2.2",
+    "version": "2.3.0",
     "description": "Nerd Fonts patched 'Iosevka' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Iosevka.zip",
-    "hash": "c9c661d28756abad70bea9339dd3673548737214ebec8e8481c0966cedc56931",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.0/Iosevka.zip",
+    "hash": "75e1a1a9d2a9440cbe4d475654a2b837598e21b66b60c24b89bb43e03658ebc8",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
