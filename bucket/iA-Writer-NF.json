@@ -1,9 +1,9 @@
 {
-    "version": "2.3.0",
+    "version": "2.3.1",
     "description": "Nerd Fonts patched 'iA-Writer' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.0/iA-Writer.zip",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.1/iA-Writer.zip",
     "hash": "ea8c78b736668dd1a49883a8057cf89198a5abc0ad7d1a47b711cb0fd300a426",
     "installer": {
         "script": [
