@@ -122,6 +122,15 @@ function Export-FontManifest {
     Start-Sleep 1
 }
 
+# Tips: $fontNames list can be generated via the following commands:
+#
+#     scoop install curl
+#     scoop install jq
+#     scoop install busybox-lean
+#
+#     curl --silent https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq '.assets[].name' | busybox sed 's/^"/    "/; s/.zip"/",/; /FontPatcher/ d; /NerdFontsSymbolsOnly/ d'
+#
+# This is useful to keep $fontNames list up to date with nerd-fonts latest release
 $fontNames = @(
     "3270",
     "Agave",
