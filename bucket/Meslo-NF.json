@@ -1,9 +1,9 @@
 {
-    "version": "2.3.0",
+    "version": "2.3.1",
     "description": "Nerd Fonts patched 'Meslo' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.0/Meslo.zip",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.1/Meslo.zip",
     "hash": "15cb5b4c6acc0cda2d5daf5e8963787cacade7e0012aca3825f2598a5fa424b5",
     "installer": {
         "script": [
