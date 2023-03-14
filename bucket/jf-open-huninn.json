@@ -1,6 +1,6 @@
 {
     "version": "2.0",
-    "description": "CJK (Chinese-Japanese-Korean) sans-serif font with round curves. The name 'hunnin' means boba(tapioca balls).",
+    "description": "CJK (Chinese-Japanese-Korean) sans-serif font with round curves. The name 'huninn' means boba(tapioca balls).",
     "homepage": "https://github.com/justfont/open-huninn-font",
     "license": "OFL-1.1",
     "url": "https://github.com/justfont/open-huninn-font/releases/download/v2.0/jf-openhuninn-2.0.ttf",
@@ -60,7 +60,7 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'jf-openhunnin' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font 'jf-openhuninn' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     },
