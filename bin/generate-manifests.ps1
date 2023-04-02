@@ -179,10 +179,6 @@ $fontNames = @(
     "VictorMono"
 )
 
-$fontNames = @(
-    "3270"
-)
-
 # Generate manifests
 $fontNames | ForEach-Object {
     Export-FontManifest -Name $_ -OverwriteExisting:$OverwriteExisting
