@@ -1,10 +1,10 @@
 {
-    "version": "6.2",
+    "version": "6.3",
     "description": "An open source monospace font with round corner and ligatures for IDE and command line. (Simplified Chinese with Nerd Fonts patched)",
     "homepage": "https://github.com/subframe7536/Maple-font",
     "license": "OFL-1.1",
-    "url": "https://github.com/subframe7536/Maple-font/releases/download/v6.2/MapleMono-SC-NF.zip",
-    "hash": "6dbeb6606cdd13daaf972b991bb608d7a80ec560be0228e544b63c113faae518",
+    "url": "https://github.com/subframe7536/Maple-font/releases/download/v6.3/MapleMono-SC-NF.zip",
+    "hash": "dbaa1d9263258c4c2cb51cb00d827b0ecb79a5f397aed41372b145c5b4701dc0",
     "extract_dir": "SC-NF",
     "installer": {
         "script": [
