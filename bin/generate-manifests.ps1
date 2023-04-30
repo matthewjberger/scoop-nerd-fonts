@@ -37,13 +37,13 @@ function Export-FontManifest {
     $filter = if ($IsMono) { "'*Mono Windows Compatible*'" } else { "'*Complete Windows Compatible*'" }
 
     $templateData = [ordered]@{
-        "version"     = "0.0"
-        "description" = $description
-        "homepage"    = "https://github.com/ryanoasis/nerd-fonts"
-        "license"     = "MIT"
-        "url"         = " "
-        "hash"        = " "
-        "installer"   = @{
+        "version"         = "0.0"
+        "description"     = $description
+        "homepage"        = "https://github.com/ryanoasis/nerd-fonts"
+        "license"         = "MIT"
+        "url"             = " "
+        "hash"            = " "
+        "installer"       = @{
             "script" = @(
                 '$currentBuildNumber = [int] (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").CurrentBuildNumber',
                 '$windows10Version1809BuildNumber = 17763',
@@ -82,7 +82,34 @@ function Export-FontManifest {
                 '}'
             )
         }
-        "uninstaller" = @{
+        "pre_uninstall" = @(
+            '$fontInstallDir = if ($global) { "$env:windir\Fonts" } else { "$env:LOCALAPPDATA\Microsoft\Windows\Fonts" }',
+            "Get-ChildItem `$dir -Filter $filter | ForEach-Object {",
+            '    Get-ChildItem $fontInstallDir -Filter $_.Name | ForEach-Object {',
+            '        try {',
+            '            Rename-Item $_.FullName $_.FullName -ErrorVariable LockError -ErrorAction Stop',
+            '        } catch {',
+            '            Write-Host ""',
+            '            Write-Host " Error " -Background DarkRed -Foreground White -NoNewline',
+            '            Write-Host ""',
+            '            Write-Host " Cannot uninstall ''$app'' font." -Foreground DarkRed',
+            '            Write-Host ""',
+            '            Write-Host " Reason " -Background DarkCyan -Foreground White -NoNewline',
+            '            Write-Host ""',
+            '            Write-Host " The ''$app'' font is currently being used by another application," -Foreground DarkCyan',
+            '            Write-Host " so it cannot be deleted." -Foreground DarkCyan',
+            '            Write-Host ""',
+            '            Write-Host " Suggestion " -Background Magenta -Foreground White -NoNewline',
+            '            Write-Host ""',
+            '            Write-Host " Close all applications that are using ''$app'' font (e.g. vscode)," -Foreground Magenta',
+            '            Write-Host " and then try again." -Foreground Magenta',
+            '            Write-Host ""',
+            '            exit 1',
+            '        }',
+            '    }',
+            '}'
+        )
+        "uninstaller"     = @{
             "script" = @(
                 '$fontInstallDir = if ($global) { "$env:windir\Fonts" } else { "$env:LOCALAPPDATA\Microsoft\Windows\Fonts" }',
                 '$registryRoot = if ($global) { "HKLM" } else { "HKCU" }',
@@ -96,8 +123,8 @@ function Export-FontManifest {
                 '}'
             )
         }
-        "checkver"    = "github"
-        "autoupdate"  = @{
+        "checkver"        = "github"
+        "autoupdate"      = @{
             "url" = "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/${Name}.zip"
         }
     }
@@ -177,6 +204,10 @@ $fontNames = @(
     "Ubuntu",
     "UbuntuMono",
     "VictorMono"
+)
+
+$fontNames = @(
+    "3270"
 )
 
 # Generate manifests
