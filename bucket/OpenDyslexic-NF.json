@@ -1,10 +1,10 @@
 {
-    "version": "3.0.0",
+    "version": "2.3.3",
     "description": "Nerd Fonts patched 'OpenDyslexic' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/OpenDyslexic.zip",
-    "hash": "0550274a409ca273eee76352e6067f18540cfee93da2019ce4f36559aa767404",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/OpenDyslexic.zip",
+    "hash": "0b8a768e95414e8d2fc7b0550226e65a84848705aad000516cf12e731ffbf5be",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

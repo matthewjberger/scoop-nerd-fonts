@@ -1,10 +1,10 @@
 {
-    "version": "3.0.0",
+    "version": "2.3.3",
     "description": "Nerd Fonts patched 'Ubuntu' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip",
-    "hash": "a8746fc1016d64463be15ba1437b85e9b22beaa9a0e22a91761089030a2fdfba",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Ubuntu.zip",
+    "hash": "787438d097aa96eaeb75b89051d829492d1846dfe1127ad7a6e55741e02e8593",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

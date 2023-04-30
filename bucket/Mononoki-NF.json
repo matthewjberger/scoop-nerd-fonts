@@ -1,10 +1,10 @@
 {
-    "version": "3.0.0",
+    "version": "2.3.3",
     "description": "Nerd Fonts patched 'Mononoki' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Mononoki.zip",
-    "hash": "bc14697e0d471f3737e806c764c6d370efa136ae1106618993aff525cfe4c0ec",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Mononoki.zip",
+    "hash": "3a52dafaed9afeb2df5b8197ac94e4c560969f174ea6f91a0f7d2a9f4f9f814b",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

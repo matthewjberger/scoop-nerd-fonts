@@ -1,10 +1,10 @@
 {
-    "version": "3.0.0",
+    "version": "2.3.3",
     "description": "Nerd Fonts patched 'Lilex' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Lilex.zip",
-    "hash": "367629808e8e58f16b02d4b414289c3a1ed2550e6d38c45f7d93993aa7746935",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Lilex.zip",
+    "hash": "2168c7fd50da805e8b46ae24c653a006766d1ea77983a1ce50bc4eab67e251f0",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

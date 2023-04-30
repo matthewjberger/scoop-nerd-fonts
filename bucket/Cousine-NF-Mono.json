@@ -1,10 +1,10 @@
 {
-    "version": "3.0.0",
+    "version": "2.3.3",
     "description": "Nerd Fonts patched 'Cousine' Font family. (Monospace version, Nerd Fonts Symbol/Icon will be always 1 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Cousine.zip",
-    "hash": "b3fa57d3ccbce0bfe412c81bb4907f6dd08d91cc82a05509d27bc32d00704f32",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Cousine.zip",
+    "hash": "329b95fe1fcedbc6527e6b5b5ab2c58b7469fdc1c4cfcc3b88d537f3186da2a2",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
