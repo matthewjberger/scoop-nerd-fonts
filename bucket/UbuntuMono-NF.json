@@ -1,10 +1,10 @@
 {
-    "version": "3.0.0",
+    "version": "2.3.3",
     "description": "Nerd Fonts patched 'UbuntuMono' Font family. (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip",
-    "hash": "7af191908ae8e37ab1146eebd2c67f5f5151aa65e954ec1be59c65dc998ef587",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/UbuntuMono.zip",
+    "hash": "15bccf8a1a239915ae5854956d382e873a82caf145594a618bbaf41e30b0cbf7",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

@@ -1,10 +1,10 @@
 {
-    "version": "3.0.0",
+    "version": "2.3.3",
     "description": "Nerd Fonts patched 'iA-Writer' Font family. (Monospace version, Nerd Fonts Symbol/Icon will be always 1 cell wide)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/iA-Writer.zip",
-    "hash": "08e57f49f83082332dd9172257e71cda0be0fa0376d34c1ebdc04d3e57aed194",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/iA-Writer.zip",
+    "hash": "e2bc697900b7b66f34e5a3e4fe0b8b93193b2ccfdf34937afd855e0c8d447d05",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
