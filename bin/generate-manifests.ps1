@@ -19,31 +19,39 @@ Param (
 function Export-FontManifest {
     Param (
         [ValidateNotNullOrEmpty()]
-        [string]$Name,
-        [ValidateNotNullOrEmpty()]
-        [switch]$IsMono,
-        [switch]$OverwriteExisting
+        [string] $Name,
+        [ValidateSet('NF', 'NF-Mono', 'NF-Propo')]
+        [string] $Variant,
+        [switch] $OverwriteExisting
     )
 
     $description = "Nerd Fonts patched '$Name' Font family."
-    if ($IsMono) {
-        $description += " (Monospace version, Nerd Fonts Symbol/Icon will be always 1 cell wide)"
-    } else {
+    if ($Variant -eq "NF") {
         $description += " (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)"
+    } elseif ($Variant -eq "NF-Mono") {
+        $description += " (Monospace version, Nerd Fonts Symbol/Icon will be always 1 cell wide)"
+    } elseif ($Variant -eq "NF-Propo") {
+        $description += " (Proportional version, for GUI usecases)"
     }
 
-    $fullName = if ($IsMono) { "$Name-NF-Mono" } else { "$Name-NF" }
+    $fullName = "$Name-$Variant"
     $path = "$PSScriptRoot\..\bucket\$fullName.json"
-    $filter = if ($IsMono) { "'*Mono Windows Compatible*'" } else { "'*Complete Windows Compatible*'" }
+
+    $filter = "'NerdFont-*'"
+    if ($Variant -eq "NF-Mono") {
+        $filter = "'NerdFontMono-*'"
+    } elseif ($Variant -eq "NF-Propo") {
+        $filter = "'NerdFontPropo-*'"
+    }
 
     $templateData = [ordered]@{
-        "version"         = "0.0"
-        "description"     = $description
-        "homepage"        = "https://github.com/ryanoasis/nerd-fonts"
-        "license"         = "MIT"
-        "url"             = " "
-        "hash"            = " "
-        "installer"       = @{
+        "version"       = "0.0"
+        "description"   = $description
+        "homepage"      = "https://github.com/ryanoasis/nerd-fonts"
+        "license"       = "MIT"
+        "url"           = " "
+        "hash"          = " "
+        "installer"     = @{
             "script" = @(
                 '$currentBuildNumber = [int] (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").CurrentBuildNumber',
                 '$windows10Version1809BuildNumber = 17763',
@@ -109,7 +117,7 @@ function Export-FontManifest {
             '    }',
             '}'
         )
-        "uninstaller"     = @{
+        "uninstaller"   = @{
             "script" = @(
                 '$fontInstallDir = if ($global) { "$env:windir\Fonts" } else { "$env:LOCALAPPDATA\Microsoft\Windows\Fonts" }',
                 '$registryRoot = if ($global) { "HKLM" } else { "HKCU" }',
@@ -119,12 +127,12 @@ function Export-FontManifest {
                 '    Remove-Item "$fontInstallDir\$($_.Name)" -Force -ErrorAction SilentlyContinue',
                 '}',
                 'if ($cmd -eq "uninstall") {',
-                '    Write-Host "The ''$($app.Replace(''-NF'', ''''))'' Font family has been uninstalled and will not be present after restarting your computer." -Foreground Magenta',
+                '    Write-Host "The ''$app'' Font family has been uninstalled and will not be present after restarting your computer." -Foreground Magenta',
                 '}'
             )
         }
-        "checkver"        = "github"
-        "autoupdate"      = @{
+        "checkver"      = "github"
+        "autoupdate"    = @{
             "url" = "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/${Name}.zip"
         }
     }
@@ -162,6 +170,7 @@ $fontNames = @(
     "BitstreamVeraSansMono",
     "CascadiaCode",
     "CodeNewRoman",
+    "ComicShannsMono",
     "Cousine",
     "DaddyTimeMono",
     "DejaVuSansMono",
@@ -181,6 +190,7 @@ $fontNames = @(
     "InconsolataGo",
     "InconsolataLGC",
     "Iosevka",
+    "IosevkaTerm",
     "JetBrainsMono",
     "Lekton",
     "LiberationMono",
@@ -206,12 +216,9 @@ $fontNames = @(
     "VictorMono"
 )
 
-$fontNames = @(
-    "3270"
-)
-
 # Generate manifests
 $fontNames | ForEach-Object {
-    Export-FontManifest -Name $_ -OverwriteExisting:$OverwriteExisting
-    Export-FontManifest -Name $_ -IsMono -OverwriteExisting:$OverwriteExisting
+    Export-FontManifest -Name $_ -Variant NF -OverwriteExisting:$OverwriteExisting
+    Export-FontManifest -Name $_ -Variant NF-Mono -OverwriteExisting:$OverwriteExisting
+    Export-FontManifest -Name $_ -Variant NF-Propo -OverwriteExisting:$OverwriteExisting
 }
