@@ -37,11 +37,11 @@ function Export-FontManifest {
     $fullName = "$Name-$Variant"
     $path = "$PSScriptRoot\..\bucket\$fullName.json"
 
-    $filter = "'NerdFont-*'"
+    $filter = "'*NerdFont-*'"
     if ($Variant -eq "NF-Mono") {
-        $filter = "'NerdFontMono-*'"
+        $filter = "'*NerdFontMono-*'"
     } elseif ($Variant -eq "NF-Propo") {
-        $filter = "'NerdFontPropo-*'"
+        $filter = "'*NerdFontPropo-*'"
     }
 
     $templateData = [ordered]@{
