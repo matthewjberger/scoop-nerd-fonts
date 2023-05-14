@@ -157,7 +157,7 @@ function Export-FontManifest {
 #     scoop install jq
 #     scoop install busybox-lean
 #
-#     curl --silent https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq '.assets[].name' | busybox sed 's/^"/    "/; s/.zip"/",/; /FontPatcher/ d; /NerdFontsSymbolsOnly/ d'
+#     curl --silent https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq '.assets[].name' | busybox sed '/.tar.xz/d; /FontPatcher/ d; /NerdFontsSymbolsOnly/ d; s/^"/    "/; s/.zip"/",/'
 #
 # This is useful to keep $fontNames list up to date with nerd-fonts latest release
 $fontNames = @(
