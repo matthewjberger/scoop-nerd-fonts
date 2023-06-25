@@ -2,7 +2,7 @@
     "version": "1.2.1",
     "description": "An expressive monospaced font family that's built with clarity, legibility, and the needs of developers in mind,",
     "homepage": "https://github.com/intel/intel-one-mono",
-    "license": "MIT",
+    "license": "OFL-1.1",
     "url": "https://github.com/intel/intel-one-mono/releases/download/V1.2.1/ttf.zip",
     "hash": "0d5fcf4fe3fe186abf7a34b9731e4436e0b2fa2884df600c3a2af0b9308fdef6",
     "extract_dir": "ttf",
