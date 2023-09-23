@@ -1,10 +1,10 @@
 {
-    "version": "0.93",
+    "version": "0.92",
     "description": "SHSans-derived CJK font family with a more concise & modern look.",
     "homepage": "https://welai.github.io/glow-sans",
     "license": "OFL-1.1",
-    "url": "https://github.com/welai/glow-sans/releases/download/v0.93/GlowSansSC-Extended-v0.93.zip",
-    "hash": "md5:44be58aba0709c7364f10bf92467b5e8",
+    "url": "https://github.com/welai/glow-sans/releases/download/v0.92/GlowSansSC-Extended-v0.92.zip",
+    "hash": "md5:c9113775b0afc1aa8d60ac28e9e3220d",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
