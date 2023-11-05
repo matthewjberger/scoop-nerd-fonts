@@ -1,9 +1,10 @@
 {
-    "version": "nightly",
+    "version": "1699028426",
     "description": "Humanist sans-serif typeface.",
     "homepage": "https://fonts.google.com/specimen/Open+Sans",
     "license": "Apache-2.0",
     "url": "https://fonts.google.com/download?family=Open+Sans#/fonts.zip",
+    "hash": "d4295a5fdb4dc4a430953a8c157b25d3379353a4e2e19badb5fd9aa512de040f",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -83,5 +84,12 @@
             "    Write-Host \"Font 'Open Sans' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": {
+        "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/110588005/commits?path=fonts)[0].commit.committer.date -UFormat %s } catch { '' }",
+        "regex": "\\A(\\d+)\\Z"
+    },
+    "autoupdate": {
+        "url": "https://fonts.google.com/download?family=Open+Sans#/fonts.zip"
     }
 }
