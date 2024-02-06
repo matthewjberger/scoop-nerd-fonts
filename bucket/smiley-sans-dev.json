@@ -1,13 +1,13 @@
 {
-    "version": "20240206.7722534",
+    "version": "20240206.27aaa46",
     "description": "Smiley Sans (得意黑, Dev version from Github Actions). A condensed and oblique Chinese typeface seeking a visual balance between the humanist and the geometric.",
     "homepage": "https://atelier-anchor.com/typefaces/smiley-sans/",
     "license": {
         "identifier": "OFL-1.1",
         "url": "https://github.com/atelier-anchor/smiley-sans/raw/main/LICENSE"
     },
-    "url": "https://nightly.link/atelier-anchor/smiley-sans/actions/runs/7802417915/smiley-sans.zip",
-    "hash": "7ff2239004c7d921efcc6b78cbb0bf845f164c8dd18aba3cbfb0aa44827541a3",
+    "url": "https://nightly.link/atelier-anchor/smiley-sans/actions/runs/7803875580/smiley-sans.zip",
+    "hash": "dc194a74355854da7393d1e42e6102edfeae24eca301f9de37a8d840a68559ec",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
