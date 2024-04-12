@@ -161,6 +161,7 @@ function Export-FontManifest {
 #
 # This is useful to keep $fontNames list up to date with nerd-fonts latest release
 $fontNames = @(
+    "0xProto",
     "3270",
     "Agave",
     "AnonymousPro",
@@ -169,15 +170,20 @@ $fontNames = @(
     "BigBlueTerminal",
     "BitstreamVeraSansMono",
     "CascadiaCode",
+    "CascadiaMono",
     "CodeNewRoman",
     "ComicShannsMono",
+    "CommitMono",
     "Cousine",
+    "D2Coding",
     "DaddyTimeMono",
     "DejaVuSansMono",
     "DroidSansMono",
+    "EnvyCodeR",
     "FantasqueSansMono",
     "FiraCode",
     "FiraMono",
+    "GeistMono",
     "Go-Mono",
     "Gohu",
     "Hack",
@@ -189,13 +195,17 @@ $fontNames = @(
     "Inconsolata",
     "InconsolataGo",
     "InconsolataLGC",
+    "IntelOneMono",
     "Iosevka",
     "IosevkaTerm",
+    "IosevkaTermSlab",
     "JetBrainsMono",
     "Lekton",
     "LiberationMono",
     "Lilex",
+    "MartianMono",
     "Meslo",
+    "Monaspace",
     "Monofur",
     "Monoid",
     "Mononoki",
@@ -205,6 +215,7 @@ $fontNames = @(
     "Overpass",
     "ProFont",
     "ProggyClean",
+    "Recursive",
     "RobotoMono",
     "ShareTechMono",
     "SourceCodePro",
@@ -213,7 +224,9 @@ $fontNames = @(
     "Tinos",
     "Ubuntu",
     "UbuntuMono",
-    "VictorMono"
+    "UbuntuSans",
+    "VictorMono",
+    "ZedMono"
 )
 
 # Generate manifests
