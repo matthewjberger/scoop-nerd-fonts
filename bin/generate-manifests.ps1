@@ -86,7 +86,7 @@ function Export-FontManifest {
                 "Get-ChildItem `$dir -Filter $filter | ForEach-Object {",
                 '    $value = if ($global) { $_.Name } else { "$fontInstallDir\$($_.Name)" }',
                 '    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, '' (TrueType)'') -Value $value -Force | Out-Null',
-                '    Copy-Item $_.FullName -Destination $fontInstallDir',
+                '    Copy-Item -LiteralPath $_.FullName -Destination $fontInstallDir',
                 '}'
             )
         }
