@@ -1,17 +1,17 @@
 {
     "version": "1.501",
-    "description": "An open-source Chinese font derived from Fontworks' Klee One. 一款基于 FONTWORKS 出品字体 Klee One 改造的开源中文字体。",
-    "homepage": "https://github.com/lxgw/LxgwWenkai",
+    "description": "An open-source Simplified Chinese font derived from Fontworks' Klee One. 一款基于 FONTWORKS 出品字体 Klee One 改造的开源简体中文字体。",
+    "homepage": "https://github.com/lxgw/LxgwWenkaiGB",
     "license": "OFL-1.1",
     "url": [
-        "https://github.com/lxgw/LxgwWenkai/releases/download/v1.501/LXGWWenKaiMono-Light.ttf",
-        "https://github.com/lxgw/LxgwWenkai/releases/download/v1.501/LXGWWenKaiMono-Regular.ttf",
-        "https://github.com/lxgw/LxgwWenkai/releases/download/v1.501/LXGWWenKaiMono-Medium.ttf"
+        "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.501/LXGWWenKaiGB-Light.ttf",
+        "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.501/LXGWWenKaiGB-Regular.ttf",
+        "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.501/LXGWWenKaiGB-Medium.ttf"
     ],
     "hash": [
-        "63971df784a1ab2f74f95945f1a2121dce9a05fc7b5bc033f89182a20f934927",
-        "d4346b94028c1f2bb44c7cd330afc5433a0cf810f742cd31ea9eea7348796fbc",
-        "68074a00377051c93b1e9d552321a1da788ad2abe84f3ee4dba03d8be4836808"
+        "116b9640f773cc08f677d5a1e2803524c4afb04790d761a43f4a9fed407c7774",
+        "6578bf7091b1998098137f160a2f99180d0c333effebfcf9244b33f2a39afe71",
+        "b1e6c0c36cb73b4caf114ba4cfd73a38a151afe9a612238de021e438ad77c693"
     ],
     "installer": {
         "script": [
@@ -89,16 +89,16 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font family 'LXGWWenKaiMono' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font family 'LXGWWenKai' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     },
     "checkver": "github",
     "autoupdate": {
         "url": [
-            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKaiMono-Light.ttf",
-            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKaiMono-Regular.ttf",
-            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKaiMono-Medium.ttf"
+            "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v$version/LXGWWenKaiGB-Light.ttf",
+            "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v$version/LXGWWenKaiGB-Regular.ttf",
+            "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v$version/LXGWWenKaiGB-Medium.ttf"
         ]
     }
 }
