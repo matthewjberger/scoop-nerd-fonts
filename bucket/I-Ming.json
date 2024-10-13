@@ -15,7 +15,6 @@
         "ba877ed20835c5622e4cbe83b4107e78f11ad919d0268491efd00d4141a2fd78",
         "9d342893b0eddc5baa46398eb9e83741cad86143ddd493bdb8d04268d78ad527"
     ],
-    "extract_dir": "ipaexm00401",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -92,7 +91,7 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'IPAex Mincho' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font '$app' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     },
