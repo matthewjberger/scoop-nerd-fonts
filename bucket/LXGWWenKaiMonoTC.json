@@ -89,7 +89,7 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font family 'LXGWWenKai' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font family '$app' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     },
