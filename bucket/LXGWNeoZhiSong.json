@@ -1,18 +1,10 @@
 {
-    "version": "1.501",
-    "description": "An open-source Chinese font derived from Fontworks' Klee One. 一款基于 FONTWORKS 出品字体 Klee One 改造的开源中文字体。",
-    "homepage": "https://github.com/lxgw/LxgwWenKai",
-    "license": "OFL-1.1",
-    "url": [
-        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.501/LXGWWenKaiMono-Light.ttf",
-        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.501/LXGWWenKaiMono-Regular.ttf",
-        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.501/LXGWWenKaiMono-Medium.ttf"
-    ],
-    "hash": [
-        "63971df784a1ab2f74f95945f1a2121dce9a05fc7b5bc033f89182a20f934927",
-        "d4346b94028c1f2bb44c7cd330afc5433a0cf810f742cd31ea9eea7348796fbc",
-        "68074a00377051c93b1e9d552321a1da788ad2abe84f3ee4dba03d8be4836808"
-    ],
+    "version": "1.018",
+    "description": "A Chinese serif font derived from IPAmj Mincho. 一款衍生于「IPAmj明朝」的中文宋体字型。",
+    "homepage": "https://github.com/lxgw/LxgwNeoZhiSong",
+    "license": "IPA",
+    "url": "https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v1.018/LXGWNeoZhiSong.ttf",
+    "hash": "a36cf07e7f8e9c6c520cbb8ae032160f60b5b885c29e6dacb79f1587149a18c1",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -89,16 +81,12 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font family 'LXGWWenKaiMono' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"The '$app' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     },
     "checkver": "github",
     "autoupdate": {
-        "url": [
-            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKaiMono-Light.ttf",
-            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKaiMono-Regular.ttf",
-            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKaiMono-Medium.ttf"
-        ]
+        "url": "https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v$version/LXGWNeoZhiSong.ttf"
     }
 }
