@@ -1,5 +1,6 @@
 {
     "version": "2.004",
+    "description": "Noto Sans CJK font family in Super OTC format: a single OpenType Collection (OTC) file that efficiently compacts multiple font styles, weights, and language variants for optimized storage and usage.",
     "homepage": "https://github.com/notofonts/noto-cjk",
     "license": "OFL-1.1",
     "url": "https://github.com/notofonts/noto-cjk/releases/download/Sans2.004/00_NotoSansCJK.ttc.zip",
