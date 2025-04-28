@@ -157,15 +157,17 @@ function Export-FontManifest {
 #     scoop install jq
 #     scoop install busybox-lean
 #
-#     curl --silent https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq '.assets[].name' | busybox sed '/.tar.xz/d; /FontPatcher/ d; /NerdFontsSymbolsOnly/ d; /\.txt$/ d; s/^"/    "/; s/.zip"/",/'
+#     curl --silent https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq '.assets[].name' | busybox sed '/\.tar\.xz/d; /FontPatcher/ d; /NerdFontsSymbolsOnly/ d; /\.txt"$/ d; s/^"/    "/; s/\.zip"/",/; $s/,$//'
 #
 # This is useful to keep $fontNames list up to date with nerd-fonts latest release
 $fontNames = @(
     "0xProto",
     "3270",
+    "AdwaitaMono",
     "Agave",
     "AnonymousPro",
     "Arimo",
+    "AtkinsonHyperlegibleMono",
     "AurulentSansMono",
     "BigBlueTerminal",
     "BitstreamVeraSansMono",
