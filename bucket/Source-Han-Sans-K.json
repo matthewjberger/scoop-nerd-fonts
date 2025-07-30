@@ -1,10 +1,10 @@
 {
-    "version": "2.004",
+    "version": "2.005",
     "description": "Source Han Sans is a set of OpenType Pan-CJK fonts. (Korean variant)",
     "homepage": "https://github.com/adobe-fonts/source-han-sans/",
     "license": "OFL-1.1",
-    "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/SourceHanSansK.zip",
-    "hash": "5390443fb4fee71af369858d99d3fb78e67bf661194f91a776fb2b5713ab8f44",
+    "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/08_SourceHanSansK.zip",
+    "hash": "3f43910d3bd7bbbae283b9e05b05b2315a2a71e4880d015625994c6b309e9392",
     "extract_dir": "OTF/Korean",
     "installer": {
         "script": [
@@ -91,6 +91,6 @@
         "regex": "Version ([\\d.]+)R"
     },
     "autoupdate": {
-        "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/SourceHanSansK.zip"
+        "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/08_SourceHanSansK.zip"
     }
 }
