@@ -1,10 +1,10 @@
 {
-    "version": "2.004",
+    "version": "2.005",
     "description": "Source Han Sans is a set of OpenType Pan-CJK fonts. (Japanese variant)",
     "homepage": "https://github.com/adobe-fonts/source-han-sans/",
     "license": "OFL-1.1",
-    "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/SourceHanSansJ.zip",
-    "hash": "747734b49301784fed68440711a106de42714d3a7dbc79064a30bbb0cac3f986",
+    "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/07_SourceHanSansJ.zip",
+    "hash": "c6b77d7aabdee4ff6cc24823e3f1048c41cd5bba9df61ca59b071183ec297195",
     "extract_dir": "OTF/Japanese",
     "installer": {
         "script": [
@@ -91,6 +91,6 @@
         "regex": "Version ([\\d.]+)R"
     },
     "autoupdate": {
-        "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/SourceHanSansJ.zip"
+        "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/07_SourceHanSansJ.zip"
     }
 }
