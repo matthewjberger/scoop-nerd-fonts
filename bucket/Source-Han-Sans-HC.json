@@ -1,10 +1,10 @@
 {
-    "version": "2.004",
+    "version": "2.005",
     "description": "Source Han Sans is a set of OpenType Pan-CJK fonts. (Traditional Chinese Hong Kong variant)",
     "homepage": "https://github.com/adobe-fonts/source-han-sans/",
     "license": "OFL-1.1",
-    "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/SourceHanSansHC.zip",
-    "hash": "551cf3ad1527b3debe2b0efb94133c9ef75c873f75f11b933e6bd6a1f37a8a42",
+    "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/11_SourceHanSansHC.zip",
+    "hash": "b10b5e24bff835f4ac10be68f8383d451f7efc7ffbc1f44c904bbe8db458914e",
     "extract_dir": "OTF/TraditionalChineseHK",
     "installer": {
         "script": [
@@ -91,6 +91,6 @@
         "regex": "Version ([\\d.]+)R"
     },
     "autoupdate": {
-        "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/SourceHanSansHC.zip"
+        "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest/download/11_SourceHanSansHC.zip"
     }
 }
