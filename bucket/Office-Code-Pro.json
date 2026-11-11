@@ -78,7 +78,7 @@
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
             "Get-ChildItem $dir -Filter '*.otf' | ForEach-Object {",
-            "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (OpenType)') -Force -ErrorAction SilentlyContinue",
+            "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
